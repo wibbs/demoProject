@@ -1,13 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp-Editor", "Assembly-CSharp-Editor.csproj", "{B728BA6F-BB4A-66B9-57A2-597CAD6A31B0}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp-firstpass", "Assembly-CSharp-firstpass.csproj", "{6BCF1753-8618-A6C0-7F1D-4322E3AED478}"
 EndProject
-Project("{b955b5aa-9c1c-4cd6-9a10-9e34431be3eb}") = "Assembly-UnityScript-firstpass", "Assembly-UnityScript-firstpass.unityproj", "{B611C50C-18B6-D155-D754-29827D7FD9C1}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameObjects", "Assets\Scripts\GameObjects\GameObjects.csproj", "{A513BC8D-6A7D-D6C5-EEBE-D27CF600D276}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Behaviors", "Assets\Scripts\Behaviors\Behaviors.csproj", "{C5ED7D35-DC65-448A-B076-5F1E43D065E5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp-vs", "Assembly-CSharp-vs.csproj", "{A513BC8D-6A7D-D6C5-EEBE-D27CF600D276}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,18 +21,14 @@ Global
 		{A513BC8D-6A7D-D6C5-EEBE-D27CF600D276}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A513BC8D-6A7D-D6C5-EEBE-D27CF600D276}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A513BC8D-6A7D-D6C5-EEBE-D27CF600D276}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B611C50C-18B6-D155-D754-29827D7FD9C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B611C50C-18B6-D155-D754-29827D7FD9C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B611C50C-18B6-D155-D754-29827D7FD9C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B611C50C-18B6-D155-D754-29827D7FD9C1}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C5ED7D35-DC65-448A-B076-5F1E43D065E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C5ED7D35-DC65-448A-B076-5F1E43D065E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C5ED7D35-DC65-448A-B076-5F1E43D065E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C5ED7D35-DC65-448A-B076-5F1E43D065E5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B728BA6F-BB4A-66B9-57A2-597CAD6A31B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B728BA6F-BB4A-66B9-57A2-597CAD6A31B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B728BA6F-BB4A-66B9-57A2-597CAD6A31B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B728BA6F-BB4A-66B9-57A2-597CAD6A31B0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
 		BaseDirectory = Assets\Scripts
-		StartupItem = Assembly-CSharp-firstpass.csproj
+		StartupItem = Assembly-CSharp-Editor.csproj
 		Policies = $0
 		$0.TextStylePolicy = $1
 		$1.inheritsSet = null
@@ -50,7 +44,7 @@ Global
 		$3.inheritsSet = Mono
 		$3.inheritsScope = text/plain
 		$3.scope = text/plain
-		outputpath = .\Assets\Scripts\build\bin
+		outputpath = Assets\Scripts\build\bin
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -4,7 +4,7 @@ using System.Xml.Linq;
 
 namespace GameObjects
 {
-	public abstract class BaseEquipment : ISavable, IBaseItem {	
+	public abstract class BaseEquipment : IBaseItem {	
 
 		#region Read-Only Properties
 
@@ -21,6 +21,7 @@ namespace GameObjects
 		public int CurrentItemHealth { get; private set; }
 		public float RootModifier { get; private set; }
 		public Dictionary<EquipmentStatTypes, int> Stats { get; private set; }
+		public float Weight { get; private set; }
 
 		#endregion
 
@@ -28,15 +29,16 @@ namespace GameObjects
 
 		public BaseEquipment(XElement equipmentXML) 
 		{
-			Name = equipmentXML.Attribute("Name").Value;
-			RequiredClass = (CharacterClasses)System.Enum.Parse(typeof(CharacterClasses), equipmentXML.Attribute("RequiredClass").Value);
-			MaxItemHealth = int.Parse(equipmentXML.Attribute("MaxItemHealth").Value);
-			CurrentItemHealth = int.Parse(equipmentXML.Attribute ("CurrentItemHealth").Value);
-			StrengthRequirement = int.Parse(equipmentXML.Attribute ("StrengthRequirement").Value);
-			DexterityRequirement = int.Parse(equipmentXML.Attribute ("DexterityRequirement").Value);
-			RootModifier = float.Parse(equipmentXML.Attribute ("RootModifier").Value);
+			Name = equipmentXML.Attribute(Constants.XMLName).Value;
+			RequiredClass = (CharacterClasses)System.Enum.Parse(typeof(CharacterClasses), equipmentXML.Attribute(Constants.XMLRequiredClass).Value);
+			MaxItemHealth = int.Parse(equipmentXML.Attribute(Constants.XMLMaxItemHealth).Value);
+			CurrentItemHealth = int.Parse(equipmentXML.Attribute (Constants.XMLCurrentItemHealth).Value);
+			StrengthRequirement = int.Parse(equipmentXML.Attribute (Constants.XMLStrengthRequirement).Value);
+			DexterityRequirement = int.Parse(equipmentXML.Attribute (Constants.XMLDexterityRequirement).Value);
+			RootModifier = float.Parse(equipmentXML.Attribute (Constants.XMLRootModifier).Value);
+			Weight = float.Parse(equipmentXML.Attribute (Constants.XMLWeight).Value);
 
-			foreach (XAttribute attr in equipmentXML.Element("Equipment Types Stats").Attributes()) 
+			foreach (XAttribute attr in equipmentXML.Element(Constants.XMLEquipmentTypesStats).Attributes()) 
 			{
 				Stats.Add((EquipmentStatTypes)System.Enum.Parse(typeof(EquipmentStatTypes), attr.Name.ToString()), int.Parse(attr.Value));
 			}
@@ -92,16 +94,16 @@ namespace GameObjects
 		public XElement Save()
 		{
 			//Add the base stats as attributes
-			XElement equipmentData = new XElement ("Equipment", 
-			                                       new XAttribute("Name", Name), 
-			                                       new XAttribute("MaxItemHealth", MaxItemHealth),
-			                                       new XAttribute("CurrentItemHealth", CurrentItemHealth),
-			                                       new XAttribute("StrengthRequirement", StrengthRequirement),
-			                                       new XAttribute("DexterityRequirement", DexterityRequirement),
-			                                       new XAttribute("RootModifier", RootModifier));
+			XElement equipmentData = new XElement (Constants.XMLEquipment, 
+			                                       new XAttribute(Constants.XMLName, Name), 
+			                                       new XAttribute(Constants.XMLMaxItemHealth, MaxItemHealth),
+			                                       new XAttribute(Constants.XMLCurrentItemHealth, CurrentItemHealth),
+			                                       new XAttribute(Constants.XMLStrengthRequirement, StrengthRequirement),
+			                                       new XAttribute(Constants.XMLDexterityRequirement, DexterityRequirement),
+			                                       new XAttribute(Constants.XMLRootModifier, RootModifier));
 
 			//Add the dynamic stats as a sub-element to the base stats
-			XElement equipmentTypesStats = new XElement ("Equipment Types Stats");
+			XElement equipmentTypesStats = new XElement (Constants.XMLEquipmentTypesStats);
 			foreach(EquipmentStatTypes statType in Stats.Keys)
 			{
 				equipmentTypesStats.Add(new XAttribute(statType.ToString(), Stats[statType]));

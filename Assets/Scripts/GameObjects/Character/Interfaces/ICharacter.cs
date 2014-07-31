@@ -8,24 +8,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 using System;
-using System.Xml.Linq;
-
 namespace GameObjects
 {
-	public class Consumable : IBaseItem
+	public interface ICharacter
 	{
-		public string Name { get; private set; }
-		public float Weight { get; private set; }
 
-		public Consumable ()
-		{
-
-		}
-
-		public XElement Save()
-		{
-			return null;
-		}
 	}
 }
 

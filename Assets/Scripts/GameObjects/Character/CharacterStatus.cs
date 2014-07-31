@@ -1,55 +1,54 @@
-﻿using UnityEngine;
-using System.Collections;
+﻿using System;
 
-public class CharacterStatus : MonoBehaviour {
+namespace GameObjects
+{
+	public class CharacterStatus {
 
-	#region Public Properties
+		#region Public Properties
 
-	public int Strength = 1;
-	public int Dexterity = 1;
-	public int Endurance = 1;
-	public int Intelligence = 1;
+		public int Strength { get; private set; }
+		public int Dexterity { get; private set; }
+		public int Endurance { get; private set; }
+		public int Intelligence { get; private set; }
+		public float MaxEncumberance { get; private set; }
 
-	#endregion
+		#endregion
 
 
-	#region Read-Only Properties
+		#region Constructor
 
-	public int Health {
-		get {
-			return Strength + Endurance;
+		public CharacterStatus()
+		{
+
 		}
-	}
 
-	public int Dodge {
-		get {
-			return Dexterity + Intelligence;
+		#endregion
+
+
+		#region Read-Only Properties
+
+		public int Health {
+			get {
+				return Strength + Endurance;
+			}
 		}
+
+		public int Dodge {
+			get {
+				return Dexterity + Intelligence;
+			}
+		}
+
+		#endregion
+
+
+		#region Private Properties
+
+
+
+		#endregion
+
+
+
 	}
-
-	#endregion
-
-
-	#region Private Properties
-
-	private CharacterInventory _inventory;
-
-	#endregion
-
-
-	#region Methods
-
-	void Start () {
-	
-	}
-	
-
-	void Update () {
-	
-	}
-
-	#endregion
-
-
-
 }

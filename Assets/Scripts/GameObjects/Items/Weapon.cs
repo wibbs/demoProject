@@ -4,7 +4,7 @@ using System.Xml.Linq;
 
 namespace GameObjects
 {
-	public class Weapon : BaseEquipment, ISavable, IBaseItem {
+	public class Weapon : BaseEquipment, IBaseItem {
 
 		#region Properties
 
@@ -15,9 +15,9 @@ namespace GameObjects
 
 		#region Constructors
 
-		public Weapon(XElement weaponXML): base(weaponXML.Element("Equipment"))
+		public Weapon(XElement weaponXML): base(weaponXML.Element(Constants.XMLEquipment))
 		{
-			WeaponType = (WeaponTypes)System.Enum.Parse (typeof(WeaponTypes), weaponXML.Attribute("WeaponType").Value);
+			WeaponType = (WeaponTypes)System.Enum.Parse (typeof(WeaponTypes), weaponXML.Attribute(Constants.XMLWeaponType).Value);
 		}
 
 		#endregion
@@ -27,8 +27,8 @@ namespace GameObjects
 
 		public XElement Save()
 		{
-			XElement weaponData = new XElement ("Weapon", 
-			                                    new XAttribute ("WeaponType", WeaponType.ToString ()));
+			XElement weaponData = new XElement (Constants.XMLWeapon, 
+			                                    new XAttribute (Constants.XMLWeaponType, WeaponType.ToString ()));
 
 			weaponData.Add(base.Save ());
 

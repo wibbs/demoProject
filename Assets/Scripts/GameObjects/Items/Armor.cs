@@ -12,9 +12,16 @@ using System.Xml.Linq;
 
 namespace GameObjects
 {
-	public class Armor : BaseEquipment, ISavable, IBaseItem
+	public class Armor : BaseEquipment, IBaseItem
 	{
 		#region Properties
+		
+		public int Pockets { get; private set; }
+		
+		#endregion
+
+
+		#region Read-only Properties
 		
 		public readonly ArmorTypes ArmorType;
 		
@@ -23,9 +30,10 @@ namespace GameObjects
 		
 		#region Constructors
 		
-		public Armor(XElement weaponXML): base(weaponXML.Element("Equipment"))
+		public Armor(XElement armorXML): base(armorXML.Element(Constants.XMLEquipment))
 		{
-			ArmorType = (ArmorTypes)System.Enum.Parse (typeof(ArmorTypes), weaponXML.Attribute("ArmorType").Value);
+			ArmorType = (ArmorTypes)System.Enum.Parse (typeof(ArmorTypes), armorXML.Attribute(Constants.XMLArmorType).Value);
+			Pockets = int.Parse(armorXML.Attribute(Constants.XMLPockets).Value);
 		}
 		
 		#endregion
@@ -35,8 +43,9 @@ namespace GameObjects
 		
 		public XElement Save()
 		{
-			XElement armorData = new XElement ("Armor", 
-			                                    new XAttribute ("ArmorType", ArmorType.ToString ()));
+			XElement armorData = new XElement (Constants.XMLArmor, 
+			                                    new XAttribute (Constants.XMLArmorType, ArmorType.ToString ()),
+			                                    new XAttribute (Constants.XMLPockets, Pockets.ToString()));
 			
 			armorData.Add(base.Save ());
 			

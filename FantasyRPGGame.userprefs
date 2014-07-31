@@ -1,12 +1,8 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="c:\Users\Matthew\Documents\Test\Assets\Scripts\Behaviors\RealtimeMovementInputBehavior.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="c:\Users\Matthew\Documents\Test\Assets\Scripts\GameObjects\Items\BaseEquipment.cs">
     <Files>
-      <File FileName="Behaviors\RealtimeMovementInputBehavior.cs" Line="1" Column="1" />
-      <File FileName="c:\Users\Matthew\Documents\Test\Assets\Scripts\GameObjects\Items\Armor.cs" Line="1" Column="1" />
-      <File FileName="GameObjects\Items\Weapon.cs" Line="1" Column="1" />
-      <File FileName="c:\Users\Matthew\Documents\Test\Assets\Scripts\GameObjects\Items\BaseEquipment.cs" Line="1" Column="1" />
-      <File FileName="c:\Users\Matthew\Documents\Test\Assets\Scripts\Behaviors\RealtimeMovementInputBehavior.cs" Line="29" Column="3" />
+      <File FileName="c:\Users\Matthew\Documents\Test\Assets\Scripts\GameObjects\Items\BaseEquipment.cs" Line="56" Column="31" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
