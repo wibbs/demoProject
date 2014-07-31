@@ -27,6 +27,10 @@ namespace GameObjects
 		public static string XMLWeaponType { get { return "WeaponType"; } }
 		public static string XMLWeapon { get { return "Weapon"; } }
 		public static string XMLPockets { get { return "Pockets"; } }
+		public static string XMLCharacterStatus { get { return "CharacterStatus"; } }
+		public static string XMLInventory { get { return "Inventory"; } }
+		public static string XMLConsumable { get { return "Consumable"; } }
+		public static string XMLCharacter{ get { return "Character"; } }
 	}
 }
 

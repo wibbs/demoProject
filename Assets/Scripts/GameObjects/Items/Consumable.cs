@@ -17,7 +17,7 @@ namespace GameObjects
 		public string Name { get; private set; }
 		public float Weight { get; private set; }
 
-		public Consumable ()
+		public Consumable (XElement consumableXML)
 		{
 
 		}

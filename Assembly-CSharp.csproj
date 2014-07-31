@@ -48,7 +48,6 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\Behaviors\AssemblyInfo.cs" />
      <Compile Include="Assets\Scripts\Behaviors\Camera\SmoothFollowBehavior.cs" />
-     <Compile Include="Assets\Scripts\Behaviors\MyClass.cs" />
      <Compile Include="Assets\Scripts\Behaviors\RealtimeMovementInputBehavior.cs" />
      <Compile Include="Assets\Scripts\GameObjects\Character\CharacterStatus.cs" />
      <Compile Include="Assets\Scripts\GameObjects\Character\Interfaces\ICharacter.cs" />

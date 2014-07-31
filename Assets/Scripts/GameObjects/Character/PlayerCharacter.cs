@@ -10,6 +10,7 @@
 using System;
 using System.Xml.Linq;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace GameObjects
 {
@@ -30,6 +31,7 @@ namespace GameObjects
 
 		#region Properties
 
+		public string Name { get; private set; }
 		public CharacterStatus Status { get; private set; }
 		public List<IBaseItem> Inventory { get; private set; }
 		public Armor Armor { get; private set; }
@@ -46,7 +48,14 @@ namespace GameObjects
 
 		public PlayerCharacter (XElement characterXML)
 		{
+			Name = characterXML.Element (Constants.XMLName).Value;
+			Status = new CharacterStatus (characterXML.Element (Constants.XMLCharacterStatus));
+			Armor = new Armor (characterXML.Element (Constants.XMLArmor));
+			Weapon = new Weapon (characterXML.Element (Constants.XMLWeapon));
 
+			Inventory = new List<IBaseItem> ();
+			XElement inventoryXML = characterXML.Element (Constants.XMLInventory);
+			LoadInventory (inventoryXML);
 		}
 
 		#endregion
@@ -69,7 +78,45 @@ namespace GameObjects
 
 		public XElement Save()
 		{
-			return null;
+			XElement characterData = new XElement (Constants.XMLCharacter, 
+			                                   new XAttribute (Constants.XMLName, Name),
+			                                   new XAttribute (Constants.XMLCharacterStatus, Status.Save()),
+		                                       new XAttribute (Constants.XMLArmor, Armor.Save()),
+		               						   new XAttribute (Constants.XMLWeapon, Weapon.Save()),
+			               					   new XAttribute (Constants.XMLInventory, SaveInventory()));		
+			
+			return characterData;
+		}
+
+		private void LoadInventory(XElement inventoryXML)
+		{
+			foreach(XElement itemXML in inventoryXML.Elements())
+			{
+				switch(itemXML.Name.ToString())
+				{
+					case "Weapon":
+						Inventory.Add(new Weapon(itemXML));
+						break;
+					case "Armor":
+						Inventory.Add(new Armor(itemXML));
+						break;
+					case "Consumable":
+						Inventory.Add(new Consumable(itemXML));
+						break;
+				}
+			}
+		}
+
+		private XElement SaveInventory()
+		{
+			XElement inventoryData = new XElement (Constants.XMLInventory);
+
+			foreach(IBaseItem item in Inventory)
+			{
+				inventoryData.Add(item.Save());
+			}
+
+			return inventoryData;
 		}
 
 		#endregion

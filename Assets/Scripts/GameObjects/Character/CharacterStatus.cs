@@ -1,8 +1,9 @@
 ﻿using System;
+using System.Xml.Linq;
 
 namespace GameObjects
 {
-	public class CharacterStatus {
+	public class CharacterStatus : ISavable {
 
 		#region Public Properties
 
@@ -17,7 +18,7 @@ namespace GameObjects
 
 		#region Constructor
 
-		public CharacterStatus()
+		public CharacterStatus(XElement characterStatusXML)
 		{
 
 		}
@@ -42,9 +43,12 @@ namespace GameObjects
 		#endregion
 
 
-		#region Private Properties
+		#region Methods
 
-
+		public XElement Save()
+		{
+			return null;
+		}
 
 		#endregion
 
