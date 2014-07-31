@@ -5,11 +5,11 @@
 	<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
 	<ProductVersion>10.0.20506</ProductVersion>
 	<SchemaVersion>2.0</SchemaVersion>
-	<ProjectGuid>{6BCF1753-8618-A6C0-7F1D-4322E3AED478}</ProjectGuid>
+	<ProjectGuid>{A513BC8D-6A7D-D6C5-EEBE-D27CF600D276}</ProjectGuid>
 	<OutputType>Library</OutputType>
 	<AppDesignerFolder>Properties</AppDesignerFolder>
 	<RootNamespace></RootNamespace>
-	<AssemblyName>Assembly-CSharp-firstpass</AssemblyName>
+	<AssemblyName>Assembly-CSharp</AssemblyName>
 	<TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
 	<FileAlignment>512</FileAlignment>
 	<BaseDirectory>Assets</BaseDirectory>
@@ -46,8 +46,33 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Standard Assets\Character Controllers\Sources\Scripts\MouseLook.cs" />
-     <Compile Include="Assets\Standard Assets\Scripts\General Scripts\ActivateTrigger.cs" />
+     <Compile Include="Assets\Scripts\Behaviors\AssemblyInfo.cs" />
+     <Compile Include="Assets\Scripts\Behaviors\Camera\SmoothFollowBehavior.cs" />
+     <Compile Include="Assets\Scripts\Behaviors\MyClass.cs" />
+     <Compile Include="Assets\Scripts\Behaviors\RealtimeMovementInputBehavior.cs" />
+     <Compile Include="Assets\Scripts\GameObjects\Character\CharacterStatus.cs" />
+     <Compile Include="Assets\Scripts\GameObjects\Character\Interfaces\ICharacter.cs" />
+     <Compile Include="Assets\Scripts\GameObjects\Character\NPCs\NPCBase.cs" />
+     <Compile Include="Assets\Scripts\GameObjects\Character\PlayerCharacter.cs" />
+     <Compile Include="Assets\Scripts\GameObjects\Enums\AddToInventoryResults.cs" />
+     <Compile Include="Assets\Scripts\GameObjects\Enums\ArmorTypes.cs" />
+     <Compile Include="Assets\Scripts\GameObjects\Enums\CharacterClasses.cs" />
+     <Compile Include="Assets\Scripts\GameObjects\Enums\EquipmentStatTypes.cs" />
+     <Compile Include="Assets\Scripts\GameObjects\Enums\WeaponTypes.cs" />
+     <Compile Include="Assets\Scripts\GameObjects\Items\Accessory.cs" />
+     <Compile Include="Assets\Scripts\GameObjects\Items\Armor.cs" />
+     <Compile Include="Assets\Scripts\GameObjects\Items\BaseEquipment.cs" />
+     <Compile Include="Assets\Scripts\GameObjects\Items\Consumable.cs" />
+     <Compile Include="Assets\Scripts\GameObjects\Items\Interfaces\IBaseItem.cs" />
+     <Compile Include="Assets\Scripts\GameObjects\Items\Weapon.cs" />
+     <Compile Include="Assets\Scripts\GameObjects\SharedResources\Constants.cs" />
+     <Compile Include="Assets\Scripts\GameObjects\SharedResources\Interfaces\ISavable.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
+      <Project>{6BCF1753-8618-A6C0-7F1D-4322E3AED478}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
+    <ProjectReference Include="Assembly-UnityScript-firstpass.unityproj">
+      <Project>{B611C50C-18B6-D155-D754-29827D7FD9C1}</Project>      <Name>Assembly-UnityScript-firstpass</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

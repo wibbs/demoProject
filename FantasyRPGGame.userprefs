@@ -2,7 +2,8 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.Workbench ActiveDocument="c:\Users\Matthew\Documents\Test\Assets\Scripts\GameObjects\Items\BaseEquipment.cs">
     <Files>
-      <File FileName="c:\Users\Matthew\Documents\Test\Assets\Scripts\GameObjects\Items\BaseEquipment.cs" Line="56" Column="31" />
+      <File FileName="GameObjects\SharedResources\Constants.cs" Line="33" Column="1" />
+      <File FileName="c:\Users\Matthew\Documents\Test\Assets\Scripts\GameObjects\Items\BaseEquipment.cs" Line="74" Column="75" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

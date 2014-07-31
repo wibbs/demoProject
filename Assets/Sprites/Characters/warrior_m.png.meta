@@ -1,6 +1,19 @@
 fileFormatVersion: 2
 guid: 8302b4886245fd84787f0a8a33caef35
 TextureImporter:
+  fileIDToRecycleName:
+    21300000: warrior_m_0
+    21300002: warrior_m_1
+    21300004: warrior_m_2
+    21300006: warrior_m_3
+    21300008: warrior_m_4
+    21300010: warrior_m_5
+    21300012: warrior_m_6
+    21300014: warrior_m_7
+    21300016: warrior_m_8
+    21300018: warrior_m_9
+    21300020: warrior_m_10
+    21300022: warrior_m_11
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0

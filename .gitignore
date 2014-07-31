@@ -41,3 +41,5 @@ Thumbs.db
 Library/metadata/*
 Library/ShaderCache/*
 Assets/Scripts/GameObjects/Temp/*
+*.meta
+*.pdb

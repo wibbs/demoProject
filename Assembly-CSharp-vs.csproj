@@ -45,8 +45,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\Behaviors\AssemblyInfo.cs" />
+    <Compile Include="Assets\Scripts\Behaviors\Camera\SmoothFollowBehavior.cs" />
+    <Compile Include="Assets\Scripts\Behaviors\MyClass.cs" />
+    <Compile Include="Assets\Scripts\Behaviors\RealtimeMovementInputBehavior.cs" />
+    <Compile Include="Assets\Scripts\GameObjects\Character\CharacterStatus.cs" />
+    <Compile Include="Assets\Scripts\GameObjects\Character\Interfaces\ICharacter.cs" />
+    <Compile Include="Assets\Scripts\GameObjects\Character\NPCs\NPCBase.cs" />
+    <Compile Include="Assets\Scripts\GameObjects\Character\PlayerCharacter.cs" />
+    <Compile Include="Assets\Scripts\GameObjects\Enums\AddToInventoryResults.cs" />
+    <Compile Include="Assets\Scripts\GameObjects\Enums\ArmorTypes.cs" />
+    <Compile Include="Assets\Scripts\GameObjects\Enums\CharacterClasses.cs" />
+    <Compile Include="Assets\Scripts\GameObjects\Enums\EquipmentStatTypes.cs" />
+    <Compile Include="Assets\Scripts\GameObjects\Enums\WeaponTypes.cs" />
+    <Compile Include="Assets\Scripts\GameObjects\Items\Accessory.cs" />
+    <Compile Include="Assets\Scripts\GameObjects\Items\Armor.cs" />
+    <Compile Include="Assets\Scripts\GameObjects\Items\BaseEquipment.cs" />
+    <Compile Include="Assets\Scripts\GameObjects\Items\Consumable.cs" />
+    <Compile Include="Assets\Scripts\GameObjects\Items\Interfaces\IBaseItem.cs" />
+    <Compile Include="Assets\Scripts\GameObjects\Items\Weapon.cs" />
+    <Compile Include="Assets\Scripts\GameObjects\SharedResources\Constants.cs" />
+    <Compile Include="Assets\Scripts\GameObjects\SharedResources\Interfaces\ISavable.cs" />
     <Reference Include="Assembly-UnityScript-firstpass">
-      <HintPath>C:/Users/Matthew/Documents/Test/Library/ScriptAssemblies/Assembly-UnityScript-firstpass.dll</HintPath>
+      <HintPath>C:\Users\Matthew\Documents\Test\Library\ScriptAssemblies\Assembly-UnityScript-firstpass.dll</HintPath>
     </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
@@ -57,62 +78,4 @@
   <Target Name="AfterBuild">
   </Target>
   -->
-  <ItemGroup>
-    <None Include="Assets\Scripts\Behaviors.meta" />
-    <None Include="Assets\Scripts\GameObjects.meta" />
-    <None Include="Assets\Scripts\Behaviors\AssemblyInfo.cs.meta" />
-    <None Include="Assets\Scripts\Behaviors\Camera.meta" />
-    <None Include="Assets\Scripts\Behaviors\MyClass.cs.meta" />
-    <None Include="Assets\Scripts\Behaviors\RealtimeMovementInputBehavior.cs.meta" />
-    <None Include="Assets\Scripts\Behaviors\Camera\SmoothFollowBehavior.cs.meta" />
-    <None Include="Assets\Scripts\GameObjects\Character.meta" />
-    <None Include="Assets\Scripts\GameObjects\Enums.meta" />
-    <None Include="Assets\Scripts\GameObjects\GameObjects.csproj" />
-    <None Include="Assets\Scripts\GameObjects\Items.meta" />
-    <None Include="Assets\Scripts\GameObjects\SharedResources.meta" />
-    <None Include="Assets\Scripts\GameObjects\Character\CharacterStatus.cs.meta" />
-    <None Include="Assets\Scripts\GameObjects\Character\Interfaces.meta" />
-    <None Include="Assets\Scripts\GameObjects\Character\NPCs.meta" />
-    <None Include="Assets\Scripts\GameObjects\Character\PlayerCharacter.cs.meta" />
-    <None Include="Assets\Scripts\GameObjects\Character\Interfaces\ICharacter.cs.meta" />
-    <None Include="Assets\Scripts\GameObjects\Character\NPCs\NPCBase.cs.meta" />
-    <None Include="Assets\Scripts\GameObjects\Enums\AddToInventoryResults.cs.meta" />
-    <None Include="Assets\Scripts\GameObjects\Enums\ArmorTypes.cs.meta" />
-    <None Include="Assets\Scripts\GameObjects\Enums\CharacterClasses.cs.meta" />
-    <None Include="Assets\Scripts\GameObjects\Enums\EquipmentStatTypes.cs.meta" />
-    <None Include="Assets\Scripts\GameObjects\Enums\WeaponTypes.cs.meta" />
-    <None Include="Assets\Scripts\GameObjects\Items\Accessory.cs.meta" />
-    <None Include="Assets\Scripts\GameObjects\Items\Armor.cs.meta" />
-    <None Include="Assets\Scripts\GameObjects\Items\BaseEquipment.cs.meta" />
-    <None Include="Assets\Scripts\GameObjects\Items\Consumable.cs.meta" />
-    <None Include="Assets\Scripts\GameObjects\Items\Interfaces.meta" />
-    <None Include="Assets\Scripts\GameObjects\Items\Weapon.cs.meta" />
-    <None Include="Assets\Scripts\GameObjects\Items\Interfaces\IBaseItem.cs.meta" />
-    <None Include="Assets\Scripts\GameObjects\SharedResources\Constants.cs.meta" />
-    <None Include="Assets\Scripts\GameObjects\SharedResources\Interfaces.meta" />
-    <None Include="Assets\Scripts\GameObjects\SharedResources\Interfaces\ISavable.cs.meta" />
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="Assets\Scripts\Behaviors\AssemblyInfo.cs" />
-    <Compile Include="Assets\Scripts\Behaviors\MyClass.cs" />
-    <Compile Include="Assets\Scripts\Behaviors\RealtimeMovementInputBehavior.cs" />
-    <Compile Include="Assets\Scripts\Behaviors\Camera\SmoothFollowBehavior.cs" />
-    <Compile Include="Assets\Scripts\GameObjects\Character\CharacterStatus.cs" />
-    <Compile Include="Assets\Scripts\GameObjects\Character\PlayerCharacter.cs" />
-    <Compile Include="Assets\Scripts\GameObjects\Character\Interfaces\ICharacter.cs" />
-    <Compile Include="Assets\Scripts\GameObjects\Character\NPCs\NPCBase.cs" />
-    <Compile Include="Assets\Scripts\GameObjects\Enums\AddToInventoryResults.cs" />
-    <Compile Include="Assets\Scripts\GameObjects\Enums\ArmorTypes.cs" />
-    <Compile Include="Assets\Scripts\GameObjects\Enums\CharacterClasses.cs" />
-    <Compile Include="Assets\Scripts\GameObjects\Enums\EquipmentStatTypes.cs" />
-    <Compile Include="Assets\Scripts\GameObjects\Enums\WeaponTypes.cs" />
-    <Compile Include="Assets\Scripts\GameObjects\Items\Accessory.cs" />
-    <Compile Include="Assets\Scripts\GameObjects\Items\Armor.cs" />
-    <Compile Include="Assets\Scripts\GameObjects\Items\BaseEquipment.cs" />
-    <Compile Include="Assets\Scripts\GameObjects\Items\Consumable.cs" />
-    <Compile Include="Assets\Scripts\GameObjects\Items\Weapon.cs" />
-    <Compile Include="Assets\Scripts\GameObjects\Items\Interfaces\IBaseItem.cs" />
-    <Compile Include="Assets\Scripts\GameObjects\SharedResources\Constants.cs" />
-    <Compile Include="Assets\Scripts\GameObjects\SharedResources\Interfaces\ISavable.cs" />
-  </ItemGroup>
 </Project>

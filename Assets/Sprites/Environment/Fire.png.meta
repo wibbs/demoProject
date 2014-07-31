@@ -1,6 +1,12 @@
 fileFormatVersion: 2
 guid: 979eaa2f2ef58f74d85d761c7b63b042
 TextureImporter:
+  fileIDToRecycleName:
+    21300000: sFire_strip5_32x32_0
+    21300002: sFire_strip5_32x32_1
+    21300004: sFire_strip5_32x32_2
+    21300006: sFire_strip5_32x32_3
+    21300008: sFire_strip5_32x32_4
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
