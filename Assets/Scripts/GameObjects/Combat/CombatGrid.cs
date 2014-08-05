@@ -8,17 +8,25 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 using System;
-using System.Collections.Generic;
-
 namespace GameObjects
 {
-	public interface ICharacter
+	public class CombatGrid
 	{
-		string Name { get; }
-		CharacterStatus Status { get; }
-		List<IBaseItem> Inventory { get; }
-		Armor Armor { get; }
-		Weapon Weapon { get; }
+		#region Properties
+
+		public CombatCell[][] Cells { get; private set; }
+
+		#endregion
+
+
+		#region Constructor
+
+		public CombatGrid ()
+		{
+
+		}
+
+		#endregion
 	}
 }
 

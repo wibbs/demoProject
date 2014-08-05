@@ -8,17 +8,18 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 using System;
-using System.Collections.Generic;
-
 namespace GameObjects
 {
-	public interface ICharacter
+	public class Coordinates
 	{
-		string Name { get; }
-		CharacterStatus Status { get; }
-		List<IBaseItem> Inventory { get; }
-		Armor Armor { get; }
-		Weapon Weapon { get; }
+		public readonly int X;
+		public readonly int Y;
+
+		public Coordinates (int x, int y)
+		{
+			X = x;
+			Y = y;
+		}
 	}
 }
 

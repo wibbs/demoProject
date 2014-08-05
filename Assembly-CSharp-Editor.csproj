@@ -45,12 +45,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="tk2dExternal">
-      <HintPath>C:/Users/Matthew/Documents/Test/Assets/TK2DROOT/tk2d/Editor/tk2dExternal.dll</HintPath>
-    </Reference>
-    <Reference Include="tk2dSkin">
-      <HintPath>C:/Users/Matthew/Documents/Test/Assets/TK2DROOT/tk2d/Editor/tk2dSkin.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEditor.Graphs">
       <HintPath>C:\Program Files %28x86%29\Unity\Editor\Data\Managed\UnityEditor.Graphs.dll</HintPath>
     </Reference>
@@ -63,10 +57,4 @@
   <Target Name="AfterBuild">
   </Target>
   -->
-  <ItemGroup>
-    <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
-      <Project>{6BCF1753-8618-A6C0-7F1D-4322E3AED478}</Project>
-      <Name>Assembly-CSharp-firstpass</Name>
-    </ProjectReference>
-  </ItemGroup>
 </Project>

@@ -8,17 +8,15 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 using System;
-using System.Collections.Generic;
+using System.Xml.Linq;
 
 namespace GameObjects
 {
-	public interface ICharacter
+	public class Enemy : CharacterBase
 	{
-		string Name { get; }
-		CharacterStatus Status { get; }
-		List<IBaseItem> Inventory { get; }
-		Armor Armor { get; }
-		Weapon Weapon { get; }
+		public Enemy (XElement enemyXML) : base (enemyXML)
+		{
+		}
 	}
 }
 

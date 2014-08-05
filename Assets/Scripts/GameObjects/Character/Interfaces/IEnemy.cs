@@ -8,17 +8,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 using System;
-using System.Collections.Generic;
-
 namespace GameObjects
 {
-	public interface ICharacter
+	public interface IEnemy
 	{
-		string Name { get; }
-		CharacterStatus Status { get; }
-		List<IBaseItem> Inventory { get; }
-		Armor Armor { get; }
-		Weapon Weapon { get; }
+
 	}
 }
 

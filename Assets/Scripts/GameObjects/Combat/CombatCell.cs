@@ -8,17 +8,24 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 using System;
-using System.Collections.Generic;
-
 namespace GameObjects
 {
-	public interface ICharacter
+	public class CombatCell
 	{
-		string Name { get; }
-		CharacterStatus Status { get; }
-		List<IBaseItem> Inventory { get; }
-		Armor Armor { get; }
-		Weapon Weapon { get; }
+		#region Properties
+
+		public bool IsWalkable { get; private set; }
+
+		#endregion
+
+
+		#region Constructor
+
+		public CombatCell ()
+		{
+		}
+
+		#endregion
 	}
 }
 

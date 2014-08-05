@@ -48,11 +48,18 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\Behaviors\AssemblyInfo.cs" />
      <Compile Include="Assets\Scripts\Behaviors\Camera\SmoothFollowBehavior.cs" />
-     <Compile Include="Assets\Scripts\Behaviors\RealtimeMovementInputBehavior.cs" />
+     <Compile Include="Assets\Scripts\Behaviors\Input\RealtimeMovementInputBehavior.cs" />
+     <Compile Include="Assets\Scripts\GameObjects\Character\CharacterBase.cs" />
      <Compile Include="Assets\Scripts\GameObjects\Character\CharacterStatus.cs" />
+     <Compile Include="Assets\Scripts\GameObjects\Character\Enemy.cs" />
      <Compile Include="Assets\Scripts\GameObjects\Character\Interfaces\ICharacter.cs" />
+     <Compile Include="Assets\Scripts\GameObjects\Character\Interfaces\IEnemy.cs" />
+     <Compile Include="Assets\Scripts\GameObjects\Character\Interfaces\INPC.cs" />
      <Compile Include="Assets\Scripts\GameObjects\Character\NPCs\NPCBase.cs" />
      <Compile Include="Assets\Scripts\GameObjects\Character\PlayerCharacter.cs" />
+     <Compile Include="Assets\Scripts\GameObjects\Combat\CombatCell.cs" />
+     <Compile Include="Assets\Scripts\GameObjects\Combat\CombatGrid.cs" />
+     <Compile Include="Assets\Scripts\GameObjects\Combat\Coordinates.cs" />
      <Compile Include="Assets\Scripts\GameObjects\Enums\AddToInventoryResults.cs" />
      <Compile Include="Assets\Scripts\GameObjects\Enums\ArmorTypes.cs" />
      <Compile Include="Assets\Scripts\GameObjects\Enums\CharacterClasses.cs" />

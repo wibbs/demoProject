@@ -9,53 +9,38 @@
 //------------------------------------------------------------------------------
 using System;
 using System.Xml.Linq;
-using System.Collections.Generic;
-using System.Linq;
 
 namespace GameObjects
 {
-	public class PlayerCharacter : ICharacter, ISavable
+	public class PlayerCharacter : CharacterBase, ISavable
 	{
 		#region Private Properties
-
+		
 		private float _inventoryWeight { get {
-			float weight = 0.0f;
-			foreach(IBaseItem item in Inventory) {
-				weight += item.Weight;
-			}
+				float weight = 0.0f;
+				foreach(IBaseItem item in Inventory) {
+					weight += item.Weight;
+				}
 				return weight;
-		}}
-
+			}}
+		
 		#endregion
 
 
 		#region Properties
 
-		public string Name { get; private set; }
-		public CharacterStatus Status { get; private set; }
-		public List<IBaseItem> Inventory { get; private set; }
-		public Armor Armor { get; private set; }
-		public Weapon Weapon { get; private set; }
-
 		public float CurrentEncumberance { get {
-			return _inventoryWeight + Armor.Weight + Weapon.Weight;
-		}}
+				return _inventoryWeight + Armor.Weight + Weapon.Weight;
+			}}
 
 		#endregion
 
 
 		#region Constructor
 
-		public PlayerCharacter (XElement characterXML)
+		public PlayerCharacter (XElement characterXML) : base(characterXML)
 		{
-			Name = characterXML.Element (Constants.XMLName).Value;
-			Status = new CharacterStatus (characterXML.Element (Constants.XMLCharacterStatus));
-			Armor = new Armor (characterXML.Element (Constants.XMLArmor));
-			Weapon = new Weapon (characterXML.Element (Constants.XMLWeapon));
 
-			Inventory = new List<IBaseItem> ();
-			XElement inventoryXML = characterXML.Element (Constants.XMLInventory);
-			LoadInventory (inventoryXML);
 		}
 
 		#endregion
@@ -72,51 +57,32 @@ namespace GameObjects
 			else {
 				Inventory.Add(item);
 			}
-
+			
 			return AddToInventoryResults.Success;
 		}	
-
-		public XElement Save()
-		{
-			XElement characterData = new XElement (Constants.XMLCharacter, 
-			                                   new XAttribute (Constants.XMLName, Name),
-			                                   new XAttribute (Constants.XMLCharacterStatus, Status.Save()),
-		                                       new XAttribute (Constants.XMLArmor, Armor.Save()),
-		               						   new XAttribute (Constants.XMLWeapon, Weapon.Save()),
-			               					   new XAttribute (Constants.XMLInventory, SaveInventory()));		
-			
-			return characterData;
-		}
-
-		private void LoadInventory(XElement inventoryXML)
-		{
-			foreach(XElement itemXML in inventoryXML.Elements())
-			{
-				switch(itemXML.Name.ToString())
-				{
-					case "Weapon":
-						Inventory.Add(new Weapon(itemXML));
-						break;
-					case "Armor":
-						Inventory.Add(new Armor(itemXML));
-						break;
-					case "Consumable":
-						Inventory.Add(new Consumable(itemXML));
-						break;
-				}
-			}
-		}
 
 		private XElement SaveInventory()
 		{
 			XElement inventoryData = new XElement (Constants.XMLInventory);
-
+			
 			foreach(IBaseItem item in Inventory)
 			{
 				inventoryData.Add(item.Save());
 			}
-
+			
 			return inventoryData;
+		}
+
+		public XElement Save()
+		{
+			XElement characterData = new XElement (Constants.XMLCharacter, 
+			                                       new XAttribute (Constants.XMLName, Name),
+			                                       new XAttribute (Constants.XMLCharacterStatus, Status.Save()),
+			                                       new XAttribute (Constants.XMLArmor, Armor.Save()),
+			                                       new XAttribute (Constants.XMLWeapon, Weapon.Save()),
+			                                       new XAttribute (Constants.XMLInventory, SaveInventory()));		
+			
+			return characterData;
 		}
 
 		#endregion
