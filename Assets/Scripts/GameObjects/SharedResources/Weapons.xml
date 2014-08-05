@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--List of weapons that can be found-->
+
+<!-- This is a sample-->
+<Weapon ArmorType="Warhammer">
+	<Equipment Name="Test Weapon" Sprites="Assets\Weapons\TestWeapon" MaxItemHealth=100 CurrentItemHealth=100 StrengthRequirement=10 DexterityRequirement=10 RootModifier=1.0 Weight=10>
+		<EquipmentTypesStats Blunt=10 Fire=5/>
+	</Equipment>
+</Weapon>

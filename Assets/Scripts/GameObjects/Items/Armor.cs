@@ -45,7 +45,7 @@ namespace GameObjects
 		{
 			XElement armorData = new XElement (Constants.XMLArmor, 
 			                                    new XAttribute (Constants.XMLArmorType, ArmorType.ToString ()),
-			                                    new XAttribute (Constants.XMLPockets, Pockets.ToString()));
+			                                    new XAttribute (Constants.XMLPockets, Pockets));
 			
 			armorData.Add(base.Save ());
 			

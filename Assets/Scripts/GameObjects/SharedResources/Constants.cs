@@ -31,6 +31,7 @@ namespace GameObjects
 		public static string XMLInventory { get { return "Inventory"; } }
 		public static string XMLConsumable { get { return "Consumable"; } }
 		public static string XMLCharacter{ get { return "Character"; } }
+		public static string XMLSpritesFolder{ get { return "Sprites"; } }
 	}
 }
 

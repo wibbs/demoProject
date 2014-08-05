@@ -87,4 +87,12 @@
   <Target Name="AfterBuild">
   </Target>
   -->
+  <ItemGroup>
+    <Folder Include="Assets\Scripts\GameObjects\SharedResources\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Scripts\GameObjects\SharedResources\Consumables.xml" />
+    <None Include="Assets\Scripts\GameObjects\SharedResources\Armors.xml" />
+    <None Include="Assets\Scripts\GameObjects\SharedResources\Weapons.xml" />
+  </ItemGroup>
 </Project>

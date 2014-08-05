@@ -15,6 +15,11 @@ namespace GameObjects
 			get;
 		}
 
+		string SpritesFolder
+		{
+			get;
+		}
+
 		XElement Save();
 	}
 }

@@ -22,6 +22,7 @@ namespace GameObjects
 		public float RootModifier { get; private set; }
 		public Dictionary<EquipmentStatTypes, int> Stats { get; private set; }
 		public float Weight { get; private set; }
+		public string SpritesFolder { get; private set; }
 
 		#endregion
 
@@ -37,6 +38,7 @@ namespace GameObjects
 			DexterityRequirement = int.Parse(equipmentXML.Attribute (Constants.XMLDexterityRequirement).Value);
 			RootModifier = float.Parse(equipmentXML.Attribute (Constants.XMLRootModifier).Value);
 			Weight = float.Parse(equipmentXML.Attribute (Constants.XMLWeight).Value);
+			SpritesFolder = equipmentXML.Attribute (Constants.XMLSpritesFolder).Value;
 
 			foreach (XAttribute attr in equipmentXML.Element(Constants.XMLEquipmentTypesStats).Attributes()) 
 			{
@@ -96,11 +98,13 @@ namespace GameObjects
 			//Add the base stats as attributes
 			XElement equipmentData = new XElement (Constants.XMLEquipment, 
 			                                       new XAttribute(Constants.XMLName, Name), 
+			                                       new XAttribute(Constants.XMLSpritesFolder, SpritesFolder),
 			                                       new XAttribute(Constants.XMLMaxItemHealth, MaxItemHealth),
 			                                       new XAttribute(Constants.XMLCurrentItemHealth, CurrentItemHealth),
 			                                       new XAttribute(Constants.XMLStrengthRequirement, StrengthRequirement),
 			                                       new XAttribute(Constants.XMLDexterityRequirement, DexterityRequirement),
-			                                       new XAttribute(Constants.XMLRootModifier, RootModifier));
+			                                       new XAttribute(Constants.XMLRootModifier, RootModifier),
+			                                       new XAttribute(Constants.XMLWeight, Weight));
 
 			//Add the dynamic stats as a sub-element to the base stats
 			XElement equipmentTypesStats = new XElement (Constants.XMLEquipmentTypesStats);

@@ -1,11 +1,9 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="c:\Users\Matthew\Documents\Test\Assets\Scripts\GameObjects\Items\BaseEquipment.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="GameObjects\SharedResources\Consumables.xml">
     <Files>
-      <File FileName="GameObjects\Character\CharacterBase.cs" Line="1" Column="1" />
-      <File FileName="GameObjects\Character\Enemy.cs" Line="1" Column="1" />
-      <File FileName="GameObjects\Character\PlayerCharacter.cs" Line="1" Column="1" />
-      <File FileName="c:\Users\Matthew\Documents\Test\Assets\Scripts\GameObjects\Items\BaseEquipment.cs" Line="55" Column="1" />
+      <File FileName="GameObjects\Items\Consumable.cs" Line="34" Column="1" />
+      <File FileName="GameObjects\SharedResources\Consumables.xml" Line="5" Column="91" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

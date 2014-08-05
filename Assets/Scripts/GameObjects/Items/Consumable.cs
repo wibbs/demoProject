@@ -16,15 +16,23 @@ namespace GameObjects
 	{
 		public string Name { get; private set; }
 		public float Weight { get; private set; }
+		public string SpritesFolder { get; private set; }
 
 		public Consumable (XElement consumableXML)
 		{
-
+			Name = consumableXML.Attribute(Constants.XMLName).Value;
+			Weight = int.Parse(consumableXML.Attribute(Constants.XMLWeight).Value);
+			SpritesFolder = consumableXML.Attribute(Constants.XMLSpritesFolder).Value;
 		}
 
 		public XElement Save()
 		{
-			return null;
+			XElement consumableData = new XElement (Constants.XMLConsumable, 
+			                                   new XAttribute (Constants.XMLName, Name),
+			                                   new XAttribute (Constants.XMLWeight, Weight),
+		                                       new XAttribute (Constants.XMLSpritesFolder, SpritesFolder));
+
+			return consumableData;
 		}
 	}
 }
