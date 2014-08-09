@@ -73,6 +73,9 @@
      <Compile Include="Assets\Scripts\GameObjects\Items\Weapon.cs" />
      <Compile Include="Assets\Scripts\GameObjects\SharedResources\Constants.cs" />
      <Compile Include="Assets\Scripts\GameObjects\SharedResources\Interfaces\ISavable.cs" />
+     <None Include="Assets\Scripts\GameObjects\SharedResources\Consumables.xml" />
+     <None Include="Assets\Scripts\GameObjects\SharedResources\Armors.xml" />
+     <None Include="Assets\Scripts\GameObjects\SharedResources\Weapons.xml" />
  <Reference Include="Assembly-UnityScript-firstpass">
  <HintPath>C:/Users/Matthew/Documents/Test/Library/ScriptAssemblies/Assembly-UnityScript-firstpass.dll</HintPath>
  </Reference>
