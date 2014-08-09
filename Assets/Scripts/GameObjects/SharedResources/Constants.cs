@@ -13,7 +13,7 @@ namespace GameObjects
 	public static class Constants
 	{
 		public static string XMLName { get { return "Name"; } }
-		public static string XMLRequiredClass { get { return "RquiredClass"; } }
+        public static string XMLRequiredClass { get { return "RequiredClass"; } }
 		public static string XMLMaxItemHealth { get { return "MaxItemHealth"; } }
 		public static string XMLCurrentItemHealth { get { return "CurrentItemHealth"; } }
 		public static string XMLStrengthRequirement { get { return "StrengthRequirement"; } }

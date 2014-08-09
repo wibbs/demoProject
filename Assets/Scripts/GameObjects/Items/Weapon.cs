@@ -8,12 +8,17 @@ namespace GameObjects
 
 		#region Properties
 
-		public readonly WeaponTypes WeaponType;
+		public WeaponTypes WeaponType{ get; set; }
 
 		#endregion
 
 
 		#region Constructors
+
+		public Weapon() : base()
+		{
+			WeaponType = WeaponTypes.Longsword;
+		}
 
 		public Weapon(XElement weaponXML): base(weaponXML.Element(Constants.XMLEquipment))
 		{
@@ -35,6 +40,6 @@ namespace GameObjects
 			return weaponData;
 		}	
 
-		#endregion
+		#endregion	
 	}
 }

@@ -1,32 +1,42 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
 using System.Xml.Linq;
+using System.ComponentModel;
 
 namespace GameObjects
 {
 	public abstract class BaseEquipment : IBaseItem {	
 
-		#region Read-Only Properties
-
-		public readonly int StrengthRequirement;
-		public readonly int DexterityRequirement;
-		public readonly CharacterClasses RequiredClass;
-
-		#endregion
-
 		#region Properties
 
-		public string Name { get; private set; }
-		public int MaxItemHealth { get; private set; }
-		public int CurrentItemHealth { get; private set; }
-		public float RootModifier { get; private set; }
-		public Dictionary<EquipmentStatTypes, int> Stats { get; private set; }
-		public float Weight { get; private set; }
-		public string SpritesFolder { get; private set; }
+		public string Name { get; set; }
+		public int MaxItemHealth { get; set; }
+		public int CurrentItemHealth { get; set; }
+		public float RootModifier { get; set; }
+		public Dictionary<EquipmentStatTypes, int> Stats { get; set; }
+		public float Weight { get; set; }	
+		public string SpritesFolder { get; set; }
+		public int StrengthRequirement { get; set; }
+		public int DexterityRequirement { get; set; }
+		public CharacterClasses RequiredClass { get; set; }
 
 		#endregion
 
 		#region Constructors
+
+		public BaseEquipment()
+		{
+            Name = "New Item";
+			RequiredClass = CharacterClasses.Fighter;
+			MaxItemHealth = 100;
+			CurrentItemHealth = 100;
+			StrengthRequirement = 10;
+			DexterityRequirement = 10;
+			RootModifier = 1.00f;
+			Weight = 1.00f;
+			SpritesFolder = string.Empty;
+			Stats = new Dictionary<EquipmentStatTypes, int> ();
+		}
 
 		public BaseEquipment(XElement equipmentXML) 
 		{
@@ -39,6 +49,7 @@ namespace GameObjects
 			RootModifier = float.Parse(equipmentXML.Attribute (Constants.XMLRootModifier).Value);
 			Weight = float.Parse(equipmentXML.Attribute (Constants.XMLWeight).Value);
 			SpritesFolder = equipmentXML.Attribute (Constants.XMLSpritesFolder).Value;
+			Stats = new Dictionary<EquipmentStatTypes, int> ();
 
 			foreach (XAttribute attr in equipmentXML.Element(Constants.XMLEquipmentTypesStats).Attributes()) 
 			{
@@ -104,7 +115,8 @@ namespace GameObjects
 			                                       new XAttribute(Constants.XMLStrengthRequirement, StrengthRequirement),
 			                                       new XAttribute(Constants.XMLDexterityRequirement, DexterityRequirement),
 			                                       new XAttribute(Constants.XMLRootModifier, RootModifier),
-			                                       new XAttribute(Constants.XMLWeight, Weight));
+			                                       new XAttribute(Constants.XMLWeight, Weight),
+                                                   new XAttribute(Constants.XMLRequiredClass, RequiredClass.ToString()));
 
 			//Add the dynamic stats as a sub-element to the base stats
 			XElement equipmentTypesStats = new XElement (Constants.XMLEquipmentTypesStats);
@@ -118,6 +130,6 @@ namespace GameObjects
 			return equipmentData;
 		}
 
-		#endregion
+		#endregion	
 	}
 }

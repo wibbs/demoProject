@@ -1,9 +1,18 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<!--List of weapons that can be found-->
-
-<!-- This is a sample-->
-<Weapon ArmorType="Warhammer">
-	<Equipment Name="Test Weapon" Sprites="Assets\Weapons\TestWeapon" MaxItemHealth=100 CurrentItemHealth=100 StrengthRequirement=10 DexterityRequirement=10 RootModifier=1.0 Weight=10>
-		<EquipmentTypesStats Blunt=10 Fire=5/>
-	</Equipment>
-</Weapon>
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Weapons>
+  <Weapon WeaponType="Warhammer">
+    <Equipment Name="Test Weapon" Sprites="Assets\Weapons\TestWeapon" MaxItemHealth="100" CurrentItemHealth="100" StrengthRequirement="10" DexterityRequirement="10" RootModifier="1" Weight="10" RequiredClass="Fighter">
+      <EquipmentTypesStats Blunt="10" Fire="5" Lighning="14" />
+    </Equipment>
+  </Weapon>
+  <Weapon WeaponType="Warhammer">
+    <Equipment Name="Test Weapon 2" Sprites="Assets\Weapons\TestWeapon" MaxItemHealth="100" CurrentItemHealth="100" StrengthRequirement="10" DexterityRequirement="10" RootModifier="1" Weight="10" RequiredClass="Fighter">
+      <EquipmentTypesStats Blunt="10" Fire="5" />
+    </Equipment>
+  </Weapon>
+  <Weapon WeaponType="Warhammer">
+    <Equipment Name="Pulpmaker" Sprites="" MaxItemHealth="200" CurrentItemHealth="100" StrengthRequirement="25" DexterityRequirement="15" RootModifier="1" Weight="14" RequiredClass="Fighter">
+      <EquipmentTypesStats Blunt="10" />
+    </Equipment>
+  </Weapon>
+</Weapons>
