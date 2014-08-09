@@ -10,3 +10,15 @@ C:\Users\Matthew\Documents\Test\Temp\bin\Debug\Assembly-CSharp-firstpass.pdb
 C:\Users\Matthew\Documents\Test\obj\Debug\Assembly-CSharp.csprojResolveAssemblyReference.cache
 C:\Users\Matthew\Documents\Test\obj\Debug\Assembly-CSharp.dll
 C:\Users\Matthew\Documents\Test\obj\Debug\Assembly-CSharp.pdb
+C:\GameProject\demoProject\obj\Debug\Assembly-CSharp.csprojResolveAssemblyReference.cache
+C:\GameProject\demoProject\Temp\bin\Debug\Assembly-CSharp.dll
+C:\GameProject\demoProject\Temp\bin\Debug\Assembly-CSharp.pdb
+C:\GameProject\demoProject\Temp\bin\Debug\UnityEditor.dll
+C:\GameProject\demoProject\Temp\bin\Debug\UnityEngine.dll
+C:\GameProject\demoProject\Temp\bin\Debug\Mono.Cecil.dll
+C:\GameProject\demoProject\Temp\bin\Debug\nunit.framework.dll
+C:\GameProject\demoProject\Temp\bin\Debug\Unity.DataContract.dll
+C:\GameProject\demoProject\Temp\bin\Debug\ICSharpCode.NRefactory.dll
+C:\GameProject\demoProject\Temp\bin\Debug\Assembly-CSharp-firstpass.pdb
+C:\GameProject\demoProject\obj\Debug\Assembly-CSharp.dll
+C:\GameProject\demoProject\obj\Debug\Assembly-CSharp.pdb

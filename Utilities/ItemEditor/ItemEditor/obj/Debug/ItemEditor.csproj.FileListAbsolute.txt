@@ -12,3 +12,17 @@ C:\Users\Matthew\Documents\Test\Utilities\ItemEditor\ItemEditor\obj\Debug\ItemEd
 C:\Users\Matthew\Documents\Test\Utilities\ItemEditor\ItemEditor\obj\Debug\ItemEditor.csproj.GenerateResource.Cache
 C:\Users\Matthew\Documents\Test\Utilities\ItemEditor\ItemEditor\obj\Debug\ItemEditor.exe
 C:\Users\Matthew\Documents\Test\Utilities\ItemEditor\ItemEditor\obj\Debug\ItemEditor.pdb
+C:\GameProject\demoProject\Utilities\ItemEditor\ItemEditor\bin\Debug\ItemEditor.exe.config
+C:\GameProject\demoProject\Utilities\ItemEditor\ItemEditor\obj\Debug\ItemEditor.csprojResolveAssemblyReference.cache
+C:\GameProject\demoProject\Utilities\ItemEditor\ItemEditor\obj\Debug\ItemEditor.EquipmentStatTypePicker.resources
+C:\GameProject\demoProject\Utilities\ItemEditor\ItemEditor\obj\Debug\ItemEditor.StartWindow.resources
+C:\GameProject\demoProject\Utilities\ItemEditor\ItemEditor\obj\Debug\ItemEditor.Properties.Resources.resources
+C:\GameProject\demoProject\Utilities\ItemEditor\ItemEditor\obj\Debug\ItemEditor.WeaponEditorWindow.resources
+C:\GameProject\demoProject\Utilities\ItemEditor\ItemEditor\obj\Debug\ItemEditor.csproj.GenerateResource.Cache
+C:\GameProject\demoProject\Utilities\ItemEditor\ItemEditor\bin\Debug\ItemEditor.exe
+C:\GameProject\demoProject\Utilities\ItemEditor\ItemEditor\bin\Debug\ItemEditor.pdb
+C:\GameProject\demoProject\Utilities\ItemEditor\ItemEditor\bin\Debug\Assembly-CSharp.dll
+C:\GameProject\demoProject\Utilities\ItemEditor\ItemEditor\bin\Debug\UnityEngine.dll
+C:\GameProject\demoProject\Utilities\ItemEditor\ItemEditor\bin\Debug\Assembly-CSharp.pdb
+C:\GameProject\demoProject\Utilities\ItemEditor\ItemEditor\obj\Debug\ItemEditor.exe
+C:\GameProject\demoProject\Utilities\ItemEditor\ItemEditor\obj\Debug\ItemEditor.pdb
