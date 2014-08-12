@@ -47,6 +47,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ArmorEditorWindowcs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ArmorEditorWindowcs.Designer.cs">
+      <DependentUpon>ArmorEditorWindowcs.cs</DependentUpon>
+    </Compile>
     <Compile Include="EquipmentStatTypeEdit.cs" />
     <Compile Include="EquipmentStatTypePicker.cs">
       <SubType>Form</SubType>
@@ -68,6 +74,9 @@
     <Compile Include="WeaponEditorWindow.Designer.cs">
       <DependentUpon>WeaponEditorWindow.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ArmorEditorWindowcs.resx">
+      <DependentUpon>ArmorEditorWindowcs.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="EquipmentStatTypePicker.resx">
       <DependentUpon>EquipmentStatTypePicker.cs</DependentUpon>
     </EmbeddedResource>

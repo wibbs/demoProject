@@ -7,6 +7,6 @@ C:\Users\Matthew\Documents\Test\Temp\bin\Debug\Mono.Cecil.dll
 C:\Users\Matthew\Documents\Test\Temp\bin\Debug\nunit.framework.dll
 C:\Users\Matthew\Documents\Test\Temp\bin\Debug\Unity.DataContract.dll
 C:\Users\Matthew\Documents\Test\Temp\bin\Debug\ICSharpCode.NRefactory.dll
-C:\Users\Matthew\Documents\Test\Temp\bin\Debug\Assembly-CSharp-firstpass.pdb
 C:\Users\Matthew\Documents\Test\obj\Debug\Assembly-CSharp.dll
 C:\Users\Matthew\Documents\Test\obj\Debug\Assembly-CSharp.pdb
+C:\Users\Matthew\Documents\Test\Temp\bin\Debug\Assembly-CSharp-firstpass.pdb

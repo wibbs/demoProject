@@ -12,3 +12,4 @@ C:\Users\Matthew\Documents\Test\Utilities\ItemEditor\ItemEditor\bin\Debug\Assemb
 C:\Users\Matthew\Documents\Test\Utilities\ItemEditor\ItemEditor\obj\Debug\ItemEditor.csprojResolveAssemblyReference.cache
 C:\Users\Matthew\Documents\Test\Utilities\ItemEditor\ItemEditor\obj\Debug\ItemEditor.exe
 C:\Users\Matthew\Documents\Test\Utilities\ItemEditor\ItemEditor\obj\Debug\ItemEditor.pdb
+C:\Users\Matthew\Documents\Test\Utilities\ItemEditor\ItemEditor\obj\Debug\ItemEditor.ArmorEditorWindowcs.resources

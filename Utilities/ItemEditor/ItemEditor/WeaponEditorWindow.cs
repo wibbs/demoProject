@@ -119,6 +119,7 @@ namespace ItemEditor
         private void SetCurrentWeapon()
         {
             WeaponNameTextBox.Text = SelectedWeapon.Name;
+            WeaponDesctiptionTextBox.Text = SelectedWeapon.Description;
             WeaponTypeCombo.SelectedItem = SelectedWeapon.WeaponType.ToString();
             RequiredClassesCombo.SelectedItem = SelectedWeapon.RequiredClass.ToString();
             WeightSelector.Value = (decimal)SelectedWeapon.Weight;
@@ -141,6 +142,7 @@ namespace ItemEditor
         private void SaveCurrentWeapon()
         {
             SelectedWeapon.Name = WeaponNameTextBox.Text;
+            SelectedWeapon.Description = WeaponDesctiptionTextBox.Text;
             SelectedWeapon.WeaponType = (WeaponTypes)Enum.Parse(typeof(WeaponTypes), (string)WeaponTypeCombo.SelectedItem);
             SelectedWeapon.RequiredClass = (CharacterClasses)Enum.Parse(typeof(CharacterClasses), (string)RequiredClassesCombo.SelectedItem);
             SelectedWeapon.Weight = (float)WeightSelector.Value;
@@ -214,7 +216,7 @@ namespace ItemEditor
         {
             SaveCurrentWeapon();
             SaveWeapons();
-            Close();
+            Application.Exit();
         }
 
         private void BrowseSpriteButton_Click(object sender, EventArgs e)
@@ -225,11 +227,6 @@ namespace ItemEditor
             {
                 SpriteFolderTextBox.Text = folderDialog.SelectedPath;
             }
-        }
-
-        void WeaponEditorWindow_FormClosing(object sender, System.Windows.Forms.FormClosingEventArgs e)
-        {
-            Application.Exit();
         }
 
         #endregion

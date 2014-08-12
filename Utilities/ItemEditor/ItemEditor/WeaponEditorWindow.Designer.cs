@@ -60,6 +60,8 @@
             this.SpritesLabel = new System.Windows.Forms.Label();
             this.SpriteFolderTextBox = new System.Windows.Forms.TextBox();
             this.BrowseSpriteButton = new System.Windows.Forms.Button();
+            this.DescriptionLabel = new System.Windows.Forms.Label();
+            this.WeaponDesctiptionTextBox = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.MaxItemHealthSelector)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CurrentItemHealthSelector)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.StrengthRequirementSelector)).BeginInit();
@@ -68,7 +70,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.StatTypeBonusSelector)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.WeightSelector)).BeginInit();
             this.SuspendLayout();
-            this.FormClosing += WeaponEditorWindow_FormClosing;
             // 
             // WeaponsLabel
             // 
@@ -85,13 +86,13 @@
             this.WeaponsListBox.FormattingEnabled = true;
             this.WeaponsListBox.Location = new System.Drawing.Point(16, 30);
             this.WeaponsListBox.Name = "WeaponsListBox";
-            this.WeaponsListBox.Size = new System.Drawing.Size(120, 329);
+            this.WeaponsListBox.Size = new System.Drawing.Size(120, 394);
             this.WeaponsListBox.TabIndex = 1;
             this.WeaponsListBox.SelectedIndexChanged += new System.EventHandler(this.WeaponsListBox_SelectedIndexChanged);
             // 
             // NewWeaponButton
             // 
-            this.NewWeaponButton.Location = new System.Drawing.Point(16, 365);
+            this.NewWeaponButton.Location = new System.Drawing.Point(16, 431);
             this.NewWeaponButton.Name = "NewWeaponButton";
             this.NewWeaponButton.Size = new System.Drawing.Size(50, 23);
             this.NewWeaponButton.TabIndex = 2;
@@ -101,7 +102,7 @@
             // 
             // DeleteWeaponButton
             // 
-            this.DeleteWeaponButton.Location = new System.Drawing.Point(72, 365);
+            this.DeleteWeaponButton.Location = new System.Drawing.Point(72, 431);
             this.DeleteWeaponButton.Name = "DeleteWeaponButton";
             this.DeleteWeaponButton.Size = new System.Drawing.Size(63, 23);
             this.DeleteWeaponButton.TabIndex = 3;
@@ -128,7 +129,7 @@
             // WeaponTypeLabel
             // 
             this.WeaponTypeLabel.AutoSize = true;
-            this.WeaponTypeLabel.Location = new System.Drawing.Point(143, 53);
+            this.WeaponTypeLabel.Location = new System.Drawing.Point(142, 116);
             this.WeaponTypeLabel.Name = "WeaponTypeLabel";
             this.WeaponTypeLabel.Size = new System.Drawing.Size(31, 13);
             this.WeaponTypeLabel.TabIndex = 6;
@@ -137,7 +138,7 @@
             // MaxItemHealthLabel
             // 
             this.MaxItemHealthLabel.AutoSize = true;
-            this.MaxItemHealthLabel.Location = new System.Drawing.Point(142, 178);
+            this.MaxItemHealthLabel.Location = new System.Drawing.Point(141, 241);
             this.MaxItemHealthLabel.Name = "MaxItemHealthLabel";
             this.MaxItemHealthLabel.Size = new System.Drawing.Size(61, 13);
             this.MaxItemHealthLabel.TabIndex = 8;
@@ -145,7 +146,7 @@
             // 
             // MaxItemHealthSelector
             // 
-            this.MaxItemHealthSelector.Location = new System.Drawing.Point(145, 194);
+            this.MaxItemHealthSelector.Location = new System.Drawing.Point(144, 257);
             this.MaxItemHealthSelector.Maximum = new decimal(new int[] {
             10000,
             0,
@@ -158,7 +159,7 @@
             // CurrentItemHealthLabel
             // 
             this.CurrentItemHealthLabel.AutoSize = true;
-            this.CurrentItemHealthLabel.Location = new System.Drawing.Point(142, 217);
+            this.CurrentItemHealthLabel.Location = new System.Drawing.Point(141, 280);
             this.CurrentItemHealthLabel.Name = "CurrentItemHealthLabel";
             this.CurrentItemHealthLabel.Size = new System.Drawing.Size(75, 13);
             this.CurrentItemHealthLabel.TabIndex = 10;
@@ -166,7 +167,7 @@
             // 
             // CurrentItemHealthSelector
             // 
-            this.CurrentItemHealthSelector.Location = new System.Drawing.Point(145, 234);
+            this.CurrentItemHealthSelector.Location = new System.Drawing.Point(144, 297);
             this.CurrentItemHealthSelector.Name = "CurrentItemHealthSelector";
             this.CurrentItemHealthSelector.Size = new System.Drawing.Size(120, 20);
             this.CurrentItemHealthSelector.TabIndex = 11;
@@ -174,7 +175,7 @@
             // StrengthRequirementLabel
             // 
             this.StrengthRequirementLabel.AutoSize = true;
-            this.StrengthRequirementLabel.Location = new System.Drawing.Point(142, 257);
+            this.StrengthRequirementLabel.Location = new System.Drawing.Point(141, 320);
             this.StrengthRequirementLabel.Name = "StrengthRequirementLabel";
             this.StrengthRequirementLabel.Size = new System.Drawing.Size(110, 13);
             this.StrengthRequirementLabel.TabIndex = 12;
@@ -182,7 +183,7 @@
             // 
             // StrengthRequirementSelector
             // 
-            this.StrengthRequirementSelector.Location = new System.Drawing.Point(145, 274);
+            this.StrengthRequirementSelector.Location = new System.Drawing.Point(144, 337);
             this.StrengthRequirementSelector.Name = "StrengthRequirementSelector";
             this.StrengthRequirementSelector.Size = new System.Drawing.Size(120, 20);
             this.StrengthRequirementSelector.TabIndex = 13;
@@ -190,7 +191,7 @@
             // DexterityRequirementLabel
             // 
             this.DexterityRequirementLabel.AutoSize = true;
-            this.DexterityRequirementLabel.Location = new System.Drawing.Point(142, 297);
+            this.DexterityRequirementLabel.Location = new System.Drawing.Point(141, 360);
             this.DexterityRequirementLabel.Name = "DexterityRequirementLabel";
             this.DexterityRequirementLabel.Size = new System.Drawing.Size(111, 13);
             this.DexterityRequirementLabel.TabIndex = 14;
@@ -198,7 +199,7 @@
             // 
             // DexterityRequirementSelector
             // 
-            this.DexterityRequirementSelector.Location = new System.Drawing.Point(145, 314);
+            this.DexterityRequirementSelector.Location = new System.Drawing.Point(144, 377);
             this.DexterityRequirementSelector.Name = "DexterityRequirementSelector";
             this.DexterityRequirementSelector.Size = new System.Drawing.Size(120, 20);
             this.DexterityRequirementSelector.TabIndex = 15;
@@ -206,7 +207,7 @@
             // RootModifierLabel
             // 
             this.RootModifierLabel.AutoSize = true;
-            this.RootModifierLabel.Location = new System.Drawing.Point(142, 337);
+            this.RootModifierLabel.Location = new System.Drawing.Point(141, 400);
             this.RootModifierLabel.Name = "RootModifierLabel";
             this.RootModifierLabel.Size = new System.Drawing.Size(107, 13);
             this.RootModifierLabel.TabIndex = 16;
@@ -215,7 +216,7 @@
             // RootModifierSelector
             // 
             this.RootModifierSelector.DecimalPlaces = 2;
-            this.RootModifierSelector.Location = new System.Drawing.Point(145, 353);
+            this.RootModifierSelector.Location = new System.Drawing.Point(144, 416);
             this.RootModifierSelector.Maximum = new decimal(new int[] {
             10,
             0,
@@ -228,7 +229,7 @@
             // StatTypesLabel
             // 
             this.StatTypesLabel.AutoSize = true;
-            this.StatTypesLabel.Location = new System.Drawing.Point(270, 53);
+            this.StatTypesLabel.Location = new System.Drawing.Point(269, 116);
             this.StatTypesLabel.Name = "StatTypesLabel";
             this.StatTypesLabel.Size = new System.Drawing.Size(58, 13);
             this.StatTypesLabel.TabIndex = 18;
@@ -237,7 +238,7 @@
             // StatTypesList
             // 
             this.StatTypesList.FormattingEnabled = true;
-            this.StatTypesList.Location = new System.Drawing.Point(273, 69);
+            this.StatTypesList.Location = new System.Drawing.Point(272, 132);
             this.StatTypesList.Name = "StatTypesList";
             this.StatTypesList.Size = new System.Drawing.Size(120, 264);
             this.StatTypesList.TabIndex = 19;
@@ -246,7 +247,7 @@
             // StatTypeBonusLabel
             // 
             this.StatTypeBonusLabel.AutoSize = true;
-            this.StatTypeBonusLabel.Location = new System.Drawing.Point(270, 337);
+            this.StatTypeBonusLabel.Location = new System.Drawing.Point(269, 400);
             this.StatTypeBonusLabel.Name = "StatTypeBonusLabel";
             this.StatTypeBonusLabel.Size = new System.Drawing.Size(86, 13);
             this.StatTypeBonusLabel.TabIndex = 20;
@@ -254,14 +255,14 @@
             // 
             // StatTypeBonusSelector
             // 
-            this.StatTypeBonusSelector.Location = new System.Drawing.Point(271, 353);
+            this.StatTypeBonusSelector.Location = new System.Drawing.Point(270, 416);
             this.StatTypeBonusSelector.Name = "StatTypeBonusSelector";
             this.StatTypeBonusSelector.Size = new System.Drawing.Size(120, 20);
             this.StatTypeBonusSelector.TabIndex = 21;
             // 
             // NewStatTypeButton
             // 
-            this.NewStatTypeButton.Location = new System.Drawing.Point(271, 379);
+            this.NewStatTypeButton.Location = new System.Drawing.Point(270, 442);
             this.NewStatTypeButton.Name = "NewStatTypeButton";
             this.NewStatTypeButton.Size = new System.Drawing.Size(55, 23);
             this.NewStatTypeButton.TabIndex = 22;
@@ -271,7 +272,7 @@
             // 
             // DeleteStatTypeButton
             // 
-            this.DeleteStatTypeButton.Location = new System.Drawing.Point(332, 379);
+            this.DeleteStatTypeButton.Location = new System.Drawing.Point(331, 442);
             this.DeleteStatTypeButton.Name = "DeleteStatTypeButton";
             this.DeleteStatTypeButton.Size = new System.Drawing.Size(59, 23);
             this.DeleteStatTypeButton.TabIndex = 23;
@@ -282,7 +283,7 @@
             // WeightLabel
             // 
             this.WeightLabel.AutoSize = true;
-            this.WeightLabel.Location = new System.Drawing.Point(143, 138);
+            this.WeightLabel.Location = new System.Drawing.Point(142, 201);
             this.WeightLabel.Name = "WeightLabel";
             this.WeightLabel.Size = new System.Drawing.Size(41, 13);
             this.WeightLabel.TabIndex = 24;
@@ -290,7 +291,7 @@
             // 
             // WeightSelector
             // 
-            this.WeightSelector.Location = new System.Drawing.Point(146, 155);
+            this.WeightSelector.Location = new System.Drawing.Point(145, 218);
             this.WeightSelector.Name = "WeightSelector";
             this.WeightSelector.Size = new System.Drawing.Size(120, 20);
             this.WeightSelector.TabIndex = 25;
@@ -298,7 +299,7 @@
             // RequiredClassLabel
             // 
             this.RequiredClassLabel.AutoSize = true;
-            this.RequiredClassLabel.Location = new System.Drawing.Point(143, 95);
+            this.RequiredClassLabel.Location = new System.Drawing.Point(142, 158);
             this.RequiredClassLabel.Name = "RequiredClassLabel";
             this.RequiredClassLabel.Size = new System.Drawing.Size(78, 13);
             this.RequiredClassLabel.TabIndex = 26;
@@ -307,7 +308,7 @@
             // RequiredClassesCombo
             // 
             this.RequiredClassesCombo.FormattingEnabled = true;
-            this.RequiredClassesCombo.Location = new System.Drawing.Point(146, 111);
+            this.RequiredClassesCombo.Location = new System.Drawing.Point(145, 174);
             this.RequiredClassesCombo.Name = "RequiredClassesCombo";
             this.RequiredClassesCombo.Size = new System.Drawing.Size(121, 21);
             this.RequiredClassesCombo.TabIndex = 27;
@@ -315,14 +316,14 @@
             // WeaponTypeCombo
             // 
             this.WeaponTypeCombo.FormattingEnabled = true;
-            this.WeaponTypeCombo.Location = new System.Drawing.Point(146, 69);
+            this.WeaponTypeCombo.Location = new System.Drawing.Point(145, 132);
             this.WeaponTypeCombo.Name = "WeaponTypeCombo";
             this.WeaponTypeCombo.Size = new System.Drawing.Size(121, 21);
             this.WeaponTypeCombo.TabIndex = 28;
             // 
             // SaveButton
             // 
-            this.SaveButton.Location = new System.Drawing.Point(271, 408);
+            this.SaveButton.Location = new System.Drawing.Point(270, 471);
             this.SaveButton.Name = "SaveButton";
             this.SaveButton.Size = new System.Drawing.Size(122, 23);
             this.SaveButton.TabIndex = 29;
@@ -333,7 +334,7 @@
             // SpritesLabel
             // 
             this.SpritesLabel.AutoSize = true;
-            this.SpritesLabel.Location = new System.Drawing.Point(13, 391);
+            this.SpritesLabel.Location = new System.Drawing.Point(10, 457);
             this.SpritesLabel.Name = "SpritesLabel";
             this.SpritesLabel.Size = new System.Drawing.Size(71, 13);
             this.SpritesLabel.TabIndex = 30;
@@ -341,14 +342,14 @@
             // 
             // SpriteFolderTextBox
             // 
-            this.SpriteFolderTextBox.Location = new System.Drawing.Point(14, 410);
+            this.SpriteFolderTextBox.Location = new System.Drawing.Point(13, 473);
             this.SpriteFolderTextBox.Name = "SpriteFolderTextBox";
             this.SpriteFolderTextBox.Size = new System.Drawing.Size(195, 20);
             this.SpriteFolderTextBox.TabIndex = 31;
             // 
             // BrowseSpriteButton
             // 
-            this.BrowseSpriteButton.Location = new System.Drawing.Point(215, 408);
+            this.BrowseSpriteButton.Location = new System.Drawing.Point(214, 471);
             this.BrowseSpriteButton.Name = "BrowseSpriteButton";
             this.BrowseSpriteButton.Size = new System.Drawing.Size(50, 23);
             this.BrowseSpriteButton.TabIndex = 32;
@@ -356,11 +357,30 @@
             this.BrowseSpriteButton.UseVisualStyleBackColor = true;
             this.BrowseSpriteButton.Click += new System.EventHandler(this.BrowseSpriteButton_Click);
             // 
+            // DescriptionLabel
+            // 
+            this.DescriptionLabel.AutoSize = true;
+            this.DescriptionLabel.Location = new System.Drawing.Point(143, 53);
+            this.DescriptionLabel.Name = "DescriptionLabel";
+            this.DescriptionLabel.Size = new System.Drawing.Size(60, 13);
+            this.DescriptionLabel.TabIndex = 33;
+            this.DescriptionLabel.Text = "Description";
+            // 
+            // WeaponDesctiptionTextBox
+            // 
+            this.WeaponDesctiptionTextBox.Location = new System.Drawing.Point(146, 70);
+            this.WeaponDesctiptionTextBox.Multiline = true;
+            this.WeaponDesctiptionTextBox.Name = "WeaponDesctiptionTextBox";
+            this.WeaponDesctiptionTextBox.Size = new System.Drawing.Size(247, 43);
+            this.WeaponDesctiptionTextBox.TabIndex = 34;
+            // 
             // WeaponEditorWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(405, 452);
+            this.ClientSize = new System.Drawing.Size(405, 504);
+            this.Controls.Add(this.WeaponDesctiptionTextBox);
+            this.Controls.Add(this.DescriptionLabel);
             this.Controls.Add(this.BrowseSpriteButton);
             this.Controls.Add(this.SpriteFolderTextBox);
             this.Controls.Add(this.SpritesLabel);
@@ -441,5 +461,7 @@
         private System.Windows.Forms.Button BrowseSpriteButton;
         private System.Windows.Forms.TextBox SpriteFolderTextBox;
         private System.Windows.Forms.Label SpritesLabel;
+        private System.Windows.Forms.TextBox WeaponDesctiptionTextBox;
+        private System.Windows.Forms.Label DescriptionLabel;
     }
 }

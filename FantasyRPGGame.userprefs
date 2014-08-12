@@ -1,12 +1,12 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.Workbench ActiveDocument="GameObjects\Items\BaseEquipment.cs">
     <Files>
       <File FileName="GameObjects\SharedResources\Consumables.xml" Line="1" Column="1" />
       <File FileName="GameObjects\SharedResources\Weapons.xml" Line="1" Column="1" />
       <File FileName="GameObjects\SharedResources\Armors.xml" Line="1" Column="1" />
       <File FileName="GameObjects\Items\Weapon.cs" Line="1" Column="1" />
-      <File FileName="GameObjects\Items\BaseEquipment.cs" Line="12" Column="35" />
+      <File FileName="GameObjects\Items\BaseEquipment.cs" Line="27" Column="25" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

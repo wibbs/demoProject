@@ -19,6 +19,7 @@ namespace GameObjects
 		public int StrengthRequirement { get; set; }
 		public int DexterityRequirement { get; set; }
 		public CharacterClasses RequiredClass { get; set; }
+        public string Description { get; set; }
 
 		#endregion
 
@@ -27,6 +28,7 @@ namespace GameObjects
 		public BaseEquipment()
 		{
             Name = "New Item";
+            Description = string.Empty;
 			RequiredClass = CharacterClasses.Fighter;
 			MaxItemHealth = 100;
 			CurrentItemHealth = 100;
@@ -41,6 +43,7 @@ namespace GameObjects
 		public BaseEquipment(XElement equipmentXML) 
 		{
 			Name = equipmentXML.Attribute(Constants.XMLName).Value;
+            Description = equipmentXML.Attribute(Constants.XMLDescription).Value;
 			RequiredClass = (CharacterClasses)System.Enum.Parse(typeof(CharacterClasses), equipmentXML.Attribute(Constants.XMLRequiredClass).Value);
 			MaxItemHealth = int.Parse(equipmentXML.Attribute(Constants.XMLMaxItemHealth).Value);
 			CurrentItemHealth = int.Parse(equipmentXML.Attribute (Constants.XMLCurrentItemHealth).Value);
@@ -109,6 +112,7 @@ namespace GameObjects
 			//Add the base stats as attributes
 			XElement equipmentData = new XElement (Constants.XMLEquipment, 
 			                                       new XAttribute(Constants.XMLName, Name), 
+                                                   new XAttribute(Constants.XMLDescription, Description),
 			                                       new XAttribute(Constants.XMLSpritesFolder, SpritesFolder),
 			                                       new XAttribute(Constants.XMLMaxItemHealth, MaxItemHealth),
 			                                       new XAttribute(Constants.XMLCurrentItemHealth, CurrentItemHealth),
