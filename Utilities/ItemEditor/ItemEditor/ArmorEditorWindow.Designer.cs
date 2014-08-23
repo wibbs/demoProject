@@ -1,6 +1,6 @@
 ﻿namespace ItemEditor
 {
-    partial class ArmorEditorWindowcs
+    partial class ArmorEditorWindow
     {
         /// <summary>
         /// Required designer variable.
@@ -42,10 +42,10 @@
             this.WeightSelector = new System.Windows.Forms.NumericUpDown();
             this.MaxHealthLabel = new System.Windows.Forms.Label();
             this.MaxHealthSelector = new System.Windows.Forms.NumericUpDown();
-            this.CurrentHealthSelector = new System.Windows.Forms.Label();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.CurrentHealthLabel = new System.Windows.Forms.Label();
+            this.CurrentItemHealthSelector = new System.Windows.Forms.NumericUpDown();
             this.StrengthRequirementLabel = new System.Windows.Forms.Label();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
+            this.StrengthRequirementSelector = new System.Windows.Forms.NumericUpDown();
             this.RootModifierSelector = new System.Windows.Forms.NumericUpDown();
             this.RootModifierLabel = new System.Windows.Forms.Label();
             this.DexterityRequirementSelector = new System.Windows.Forms.NumericUpDown();
@@ -64,8 +64,8 @@
             this.NewWeaponButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.WeightSelector)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MaxHealthSelector)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CurrentItemHealthSelector)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.StrengthRequirementSelector)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RootModifierSelector)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DexterityRequirementSelector)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.StatTypeBonusSelector)).BeginInit();
@@ -187,21 +187,21 @@
             this.MaxHealthSelector.Size = new System.Drawing.Size(120, 20);
             this.MaxHealthSelector.TabIndex = 13;
             // 
-            // CurrentHealthSelector
+            // CurrentHealthLabel
             // 
-            this.CurrentHealthSelector.AutoSize = true;
-            this.CurrentHealthSelector.Location = new System.Drawing.Point(142, 277);
-            this.CurrentHealthSelector.Name = "CurrentHealthSelector";
-            this.CurrentHealthSelector.Size = new System.Drawing.Size(75, 13);
-            this.CurrentHealthSelector.TabIndex = 14;
-            this.CurrentHealthSelector.Text = "Current Health";
+            this.CurrentHealthLabel.AutoSize = true;
+            this.CurrentHealthLabel.Location = new System.Drawing.Point(142, 277);
+            this.CurrentHealthLabel.Name = "CurrentHealthLabel";
+            this.CurrentHealthLabel.Size = new System.Drawing.Size(75, 13);
+            this.CurrentHealthLabel.TabIndex = 14;
+            this.CurrentHealthLabel.Text = "Current Health";
             // 
-            // numericUpDown1
+            // CurrentItemHealthSelector
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(145, 294);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(120, 20);
-            this.numericUpDown1.TabIndex = 15;
+            this.CurrentItemHealthSelector.Location = new System.Drawing.Point(145, 294);
+            this.CurrentItemHealthSelector.Name = "CurrentItemHealthSelector";
+            this.CurrentItemHealthSelector.Size = new System.Drawing.Size(120, 20);
+            this.CurrentItemHealthSelector.TabIndex = 15;
             // 
             // StrengthRequirementLabel
             // 
@@ -212,12 +212,12 @@
             this.StrengthRequirementLabel.TabIndex = 16;
             this.StrengthRequirementLabel.Text = "Strength Requirement";
             // 
-            // numericUpDown2
+            // StrengthRequirementSelector
             // 
-            this.numericUpDown2.Location = new System.Drawing.Point(143, 334);
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(120, 20);
-            this.numericUpDown2.TabIndex = 17;
+            this.StrengthRequirementSelector.Location = new System.Drawing.Point(143, 334);
+            this.StrengthRequirementSelector.Name = "StrengthRequirementSelector";
+            this.StrengthRequirementSelector.Size = new System.Drawing.Size(120, 20);
+            this.StrengthRequirementSelector.TabIndex = 17;
             // 
             // RootModifierSelector
             // 
@@ -265,6 +265,7 @@
             this.SaveButton.TabIndex = 36;
             this.SaveButton.Text = "Save and Close";
             this.SaveButton.UseVisualStyleBackColor = true;
+            this.SaveButton.Click += new System.EventHandler(this.SaveButton_Click);
             // 
             // DeleteStatTypeButton
             // 
@@ -274,6 +275,7 @@
             this.DeleteStatTypeButton.TabIndex = 35;
             this.DeleteStatTypeButton.Text = "Delete";
             this.DeleteStatTypeButton.UseVisualStyleBackColor = true;
+            this.DeleteStatTypeButton.Click += new System.EventHandler(this.DeleteStatTypeButton_Click);
             // 
             // NewStatTypeButton
             // 
@@ -283,6 +285,7 @@
             this.NewStatTypeButton.TabIndex = 34;
             this.NewStatTypeButton.Text = "New";
             this.NewStatTypeButton.UseVisualStyleBackColor = true;
+            this.NewStatTypeButton.Click += new System.EventHandler(this.NewStatTypeButton_Click);
             // 
             // StatTypeBonusSelector
             // 
@@ -325,6 +328,7 @@
             this.BrowseSpriteButton.TabIndex = 41;
             this.BrowseSpriteButton.Text = "Browse";
             this.BrowseSpriteButton.UseVisualStyleBackColor = true;
+            this.BrowseSpriteButton.Click += new System.EventHandler(this.BrowseSpriteButton_Click);
             // 
             // SpriteFolderTextBox
             // 
@@ -350,6 +354,7 @@
             this.DeleteWeaponButton.TabIndex = 38;
             this.DeleteWeaponButton.Text = "Delete";
             this.DeleteWeaponButton.UseVisualStyleBackColor = true;
+            this.DeleteWeaponButton.Click += new System.EventHandler(this.DeleteWeaponButton_Click);
             // 
             // NewWeaponButton
             // 
@@ -359,8 +364,9 @@
             this.NewWeaponButton.TabIndex = 37;
             this.NewWeaponButton.Text = "New";
             this.NewWeaponButton.UseVisualStyleBackColor = true;
+            this.NewWeaponButton.Click += new System.EventHandler(this.NewWeaponButton_Click);
             // 
-            // ArmorEditorWindowcs
+            // ArmorEditorWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -381,10 +387,10 @@
             this.Controls.Add(this.RootModifierLabel);
             this.Controls.Add(this.DexterityRequirementSelector);
             this.Controls.Add(this.DexterityRequirementLabel);
-            this.Controls.Add(this.numericUpDown2);
+            this.Controls.Add(this.StrengthRequirementSelector);
             this.Controls.Add(this.StrengthRequirementLabel);
-            this.Controls.Add(this.numericUpDown1);
-            this.Controls.Add(this.CurrentHealthSelector);
+            this.Controls.Add(this.CurrentItemHealthSelector);
+            this.Controls.Add(this.CurrentHealthLabel);
             this.Controls.Add(this.MaxHealthSelector);
             this.Controls.Add(this.MaxHealthLabel);
             this.Controls.Add(this.WeightSelector);
@@ -399,12 +405,12 @@
             this.Controls.Add(this.NameTextBox);
             this.Controls.Add(this.ArmorsListBox);
             this.Controls.Add(this.ArmorsLabel);
-            this.Name = "ArmorEditorWindowcs";
+            this.Name = "ArmorEditorWindow";
             this.Text = "ArmorEditorWindowcs";
             ((System.ComponentModel.ISupportInitialize)(this.WeightSelector)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MaxHealthSelector)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CurrentItemHealthSelector)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.StrengthRequirementSelector)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.RootModifierSelector)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DexterityRequirementSelector)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.StatTypeBonusSelector)).EndInit();
@@ -429,10 +435,10 @@
         private System.Windows.Forms.NumericUpDown WeightSelector;
         private System.Windows.Forms.Label MaxHealthLabel;
         private System.Windows.Forms.NumericUpDown MaxHealthSelector;
-        private System.Windows.Forms.Label CurrentHealthSelector;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.Label CurrentHealthLabel;
+        private System.Windows.Forms.NumericUpDown CurrentItemHealthSelector;
         private System.Windows.Forms.Label StrengthRequirementLabel;
-        private System.Windows.Forms.NumericUpDown numericUpDown2;
+        private System.Windows.Forms.NumericUpDown StrengthRequirementSelector;
         private System.Windows.Forms.NumericUpDown RootModifierSelector;
         private System.Windows.Forms.Label RootModifierLabel;
         private System.Windows.Forms.NumericUpDown DexterityRequirementSelector;

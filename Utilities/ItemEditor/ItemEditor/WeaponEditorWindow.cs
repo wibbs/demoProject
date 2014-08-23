@@ -15,6 +15,8 @@ namespace ItemEditor
 {
     public partial class WeaponEditorWindow : Form
     {
+        #region Constructors
+
         public WeaponEditorWindow(string weaponFilePath)
         {
             Weapons = new ObservableCollection<Weapon>();
@@ -25,6 +27,10 @@ namespace ItemEditor
             LoadWeapons();
             SetBindings();
         }
+
+        #endregion
+
+        #region Properties
 
         private string _weaponsFile;
 
@@ -39,6 +45,8 @@ namespace ItemEditor
         public ObservableCollection<EquipmentStatTypeEdit> StatTypes { get; set; }
 
         public EquipmentStatTypeEdit SelectedStatType { get; set; }
+
+        #endregion
 
         #region UI Element Events
 

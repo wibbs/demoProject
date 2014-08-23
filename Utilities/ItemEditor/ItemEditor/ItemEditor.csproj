@@ -47,11 +47,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ArmorEditorWindowcs.cs">
+    <Compile Include="ArmorEditorWindow.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ArmorEditorWindowcs.Designer.cs">
-      <DependentUpon>ArmorEditorWindowcs.cs</DependentUpon>
+    <Compile Include="ArmorEditorWindow.Designer.cs">
+      <DependentUpon>ArmorEditorWindow.cs</DependentUpon>
     </Compile>
     <Compile Include="EquipmentStatTypeEdit.cs" />
     <Compile Include="EquipmentStatTypePicker.cs">
@@ -74,8 +74,8 @@
     <Compile Include="WeaponEditorWindow.Designer.cs">
       <DependentUpon>WeaponEditorWindow.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="ArmorEditorWindowcs.resx">
-      <DependentUpon>ArmorEditorWindowcs.cs</DependentUpon>
+    <EmbeddedResource Include="ArmorEditorWindow.resx">
+      <DependentUpon>ArmorEditorWindow.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EquipmentStatTypePicker.resx">
       <DependentUpon>EquipmentStatTypePicker.cs</DependentUpon>

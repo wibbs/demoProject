@@ -16,20 +16,27 @@ namespace GameObjects
 	{
 		#region Properties
 		
-		public int Pockets { get; private set; }
+		public int Pockets { get; set; }
+
+        public ArmorTypes ArmorType { get; set; }
 		
 		#endregion
 
 
 		#region Read-only Properties
 		
-		public readonly ArmorTypes ArmorType;
+
 		
 		#endregion
 		
 		
 		#region Constructors
 		
+        public Armor() : base()
+        {
+            ArmorType = ArmorTypes.Chestplate;
+        }
+
 		public Armor(XElement armorXML): base(armorXML.Element(Constants.XMLEquipment))
 		{
 			ArmorType = (ArmorTypes)System.Enum.Parse (typeof(ArmorTypes), armorXML.Attribute(Constants.XMLArmorType).Value);

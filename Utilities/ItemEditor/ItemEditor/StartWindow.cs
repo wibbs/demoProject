@@ -61,6 +61,9 @@ namespace ItemEditor
         private void ArmorsButton_Click(object sender, EventArgs e)
         {
             SaveSettings();
+            ArmorEditorWindow newWindow = new ArmorEditorWindow(ArmorsTextBox.Text);
+            newWindow.Show(this);
+            this.Hide();
         }
 
         private void WeaponsButton_Click(object sender, EventArgs e)
