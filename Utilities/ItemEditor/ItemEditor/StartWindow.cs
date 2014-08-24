@@ -56,6 +56,9 @@ namespace ItemEditor
         private void ConsumablesButton_Click(object sender, EventArgs e)
         {
             SaveSettings();
+            ConsumableEditorWindow newWindow = new ConsumableEditorWindow(ConsumablesTextBox.Text);
+            newWindow.Show(this);
+            this.Hide();
         }
 
         private void ArmorsButton_Click(object sender, EventArgs e)

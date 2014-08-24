@@ -13,29 +13,29 @@ using System.Linq;
 
 namespace ItemEditor
 {
-    public partial class EquipmentStatTypePicker : Form
+    public partial class StatTypePicker<T> : Form
     {
-        public ObservableCollection<EquipmentStatTypeEdit> AvailableStatTypes { get; private set; }
-        public EquipmentStatTypeEdit SelectedStatType { get; set; }
+        public ObservableCollection<StatTypeEdit<T>> AvailableStatTypes { get; private set; }
+        public StatTypeEdit<T> SelectedStatType { get; set; }
         public bool Confirmed { get; private set; }
 
-        public EquipmentStatTypePicker(ObservableCollection<EquipmentStatTypeEdit> currentStatTypes)
+        public StatTypePicker(ObservableCollection<StatTypeEdit<T>> currentStatTypes)
         {
-            AvailableStatTypes = new ObservableCollection<EquipmentStatTypeEdit>();
+            AvailableStatTypes = new ObservableCollection<StatTypeEdit<T>>();
             Confirmed = false;
 
             InitializeComponent();
 
-            foreach(EquipmentStatTypes stat in Enum.GetValues(typeof(EquipmentStatTypes)))
+            foreach(T stat in Enum.GetValues(typeof(T)))
             {
-                if (!currentStatTypes.Where(x => x.StatType == stat).Any())
+                if (!currentStatTypes.Where(x => x.StatType.ToString() == stat.ToString()).Any())
                 {
-                    AvailableStatTypes.Add(new EquipmentStatTypeEdit(stat));
+                    AvailableStatTypes.Add(new StatTypeEdit<T>(stat));
                 }
             }
 
-            EquipmentStatTypesList.DataSource = AvailableStatTypes;
-            EquipmentStatTypesList.DisplayMember = "Name";
+            StatTypesList.DataSource = AvailableStatTypes;
+            StatTypesList.DisplayMember = "Name";
 
             if(AvailableStatTypes.Count > 0)
                 SelectedStatType = AvailableStatTypes[0];
@@ -56,7 +56,7 @@ namespace ItemEditor
 
         private void EquipmentStatTypesList_SelectedIndexChanged(object sender, EventArgs e)
         {
-            SelectedStatType = (EquipmentStatTypeEdit)((ListBox)sender).SelectedItem;
+            SelectedStatType = (StatTypeEdit<T>)((ListBox)sender).SelectedItem;
         }        
     }
 }

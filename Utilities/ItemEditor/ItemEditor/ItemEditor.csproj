@@ -53,12 +53,18 @@
     <Compile Include="ArmorEditorWindow.Designer.cs">
       <DependentUpon>ArmorEditorWindow.cs</DependentUpon>
     </Compile>
-    <Compile Include="EquipmentStatTypeEdit.cs" />
-    <Compile Include="EquipmentStatTypePicker.cs">
+    <Compile Include="ConsumableEditorWindow.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="EquipmentStatTypePicker.Designer.cs">
-      <DependentUpon>EquipmentStatTypePicker.cs</DependentUpon>
+    <Compile Include="ConsumableEditorWindow.Designer.cs">
+      <DependentUpon>ConsumableEditorWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StatTypeEdit.cs" />
+    <Compile Include="StatTypePicker.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StatTypePicker.Designer.cs">
+      <DependentUpon>StatTypePicker.cs</DependentUpon>
     </Compile>
     <Compile Include="StartWindow.cs">
       <SubType>Form</SubType>
@@ -77,8 +83,11 @@
     <EmbeddedResource Include="ArmorEditorWindow.resx">
       <DependentUpon>ArmorEditorWindow.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="EquipmentStatTypePicker.resx">
-      <DependentUpon>EquipmentStatTypePicker.cs</DependentUpon>
+    <EmbeddedResource Include="ConsumableEditorWindow.resx">
+      <DependentUpon>ConsumableEditorWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StatTypePicker.resx">
+      <DependentUpon>StatTypePicker.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="StartWindow.resx">
       <DependentUpon>StartWindow.cs</DependentUpon>

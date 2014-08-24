@@ -43,9 +43,9 @@ namespace ItemEditor
 
         public EquipmentStatTypes SelectedType { get; set; }
 
-        public ObservableCollection<EquipmentStatTypeEdit> StatTypes { get; set; }
+        public ObservableCollection<StatTypeEdit<EquipmentStatTypes>> StatTypes { get; set; }
 
-        public EquipmentStatTypeEdit SelectedStatType { get; set; }
+        public StatTypeEdit<EquipmentStatTypes> SelectedStatType { get; set; }
 
         #endregion
 
@@ -53,7 +53,7 @@ namespace ItemEditor
 
         #region UI Element Events
 
-        private void NewWeaponButton_Click(object sender, EventArgs e)
+        private void NewArmorButton_Click(object sender, EventArgs e)
         {
             ArmorsListBox.DataSource = null;
             Armors.Add(new Armor());
@@ -61,7 +61,7 @@ namespace ItemEditor
             ArmorsListBox.DisplayMember = "Name";
         }
 
-        private void DeleteWeaponButton_Click(object sender, EventArgs e)
+        private void DeleteArmorButton_Click(object sender, EventArgs e)
         {
             Armors.Remove(SelectedArmor);
 
@@ -71,7 +71,7 @@ namespace ItemEditor
 
         private void NewStatTypeButton_Click(object sender, EventArgs e)
         {
-            EquipmentStatTypePicker statTypePicker = new EquipmentStatTypePicker(StatTypes);
+            StatTypePicker<EquipmentStatTypes> statTypePicker = new StatTypePicker<EquipmentStatTypes>(StatTypes);
             statTypePicker.FormClosing -= statTypePicker_FormClosing;
             statTypePicker.FormClosing += statTypePicker_FormClosing;
 
@@ -80,10 +80,10 @@ namespace ItemEditor
 
         void statTypePicker_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (((EquipmentStatTypePicker)sender).Confirmed)
+            if (((StatTypePicker<EquipmentStatTypes>)sender).Confirmed)
             {
                 StatTypesList.DataSource = null;
-                StatTypes.Add(((EquipmentStatTypePicker)sender).SelectedStatType);
+                StatTypes.Add(((StatTypePicker<EquipmentStatTypes>)sender).SelectedStatType);
                 StatTypesList.DataSource = StatTypes;
                 StatTypesList.DisplayMember = "Name";
             }
@@ -117,10 +117,26 @@ namespace ItemEditor
             if (SelectedStatType != null)
                 SelectedStatType.Value = Convert.ToInt32(StatTypeBonusSelector.Value);
 
-            SelectedStatType = (EquipmentStatTypeEdit)((ListBox)sender).SelectedItem;
+            SelectedStatType = (StatTypeEdit<EquipmentStatTypes>)((ListBox)sender).SelectedItem;
 
             if (SelectedStatType != null)
                 StatTypeBonusSelector.Value = SelectedStatType.Value;
+        }
+
+
+        private void BrowseSpriteButton_Click(object sender, EventArgs e)
+        {
+            FolderBrowserDialog folderDialog = new FolderBrowserDialog();
+
+            if (folderDialog.ShowDialog() == DialogResult.OK)
+            {
+                SpriteFolderTextBox.Text = folderDialog.SelectedPath;
+            }
+        }
+
+        private void ArmorEditorWindow_FormClosed(object sender, System.Windows.Forms.FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
 
         #endregion
@@ -141,10 +157,10 @@ namespace ItemEditor
             RootModifierSelector.Value = (decimal)SelectedArmor.RootModifier;
             SpriteFolderTextBox.Text = SelectedArmor.SpritesFolder;
             StatTypesList.DataSource = null;
-            StatTypes = new ObservableCollection<EquipmentStatTypeEdit>();
+            StatTypes = new ObservableCollection<StatTypeEdit<EquipmentStatTypes>>();
             foreach (EquipmentStatTypes stat in SelectedArmor.Stats.Keys)
             {
-                StatTypes.Add(new EquipmentStatTypeEdit(stat, SelectedArmor.Stats[stat]));
+                StatTypes.Add(new StatTypeEdit<EquipmentStatTypes>(stat, SelectedArmor.Stats[stat]));
             }
             StatTypesList.DataSource = StatTypes;
             StatTypesList.DisplayMember = "Name";
@@ -164,7 +180,7 @@ namespace ItemEditor
             SelectedArmor.RootModifier = (float)RootModifierSelector.Value;
             SelectedArmor.SpritesFolder = SpriteFolderTextBox.Text;
             SelectedArmor.Stats = new Dictionary<EquipmentStatTypes, int>();
-            foreach (EquipmentStatTypeEdit stat in StatTypes)
+            foreach (StatTypeEdit<EquipmentStatTypes> stat in StatTypes)
             {
                 SelectedArmor.Stats.Add(stat.StatType, stat.Value);
             }
@@ -228,16 +244,6 @@ namespace ItemEditor
             SaveCurrentArmor();
             SaveArmors();
             Application.Exit();
-        }
-
-        private void BrowseSpriteButton_Click(object sender, EventArgs e)
-        {
-            FolderBrowserDialog folderDialog = new FolderBrowserDialog();
-
-            if (folderDialog.ShowDialog() == DialogResult.OK)
-            {
-                SpriteFolderTextBox.Text = folderDialog.SelectedPath;
-            }
         }
 
         #endregion

@@ -69,6 +69,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.RootModifierSelector)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.StatTypeBonusSelector)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.WeightSelector)).BeginInit();
+            this.FormClosed += WeaponEditorWindow_FormClosed;
             this.SuspendLayout();
             // 
             // WeaponsLabel

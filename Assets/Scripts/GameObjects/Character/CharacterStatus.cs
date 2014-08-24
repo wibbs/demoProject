@@ -7,11 +7,12 @@ namespace GameObjects
 
 		#region Public Properties
 
-		public int Strength { get; private set; }
-		public int Dexterity { get; private set; }
-		public int Endurance { get; private set; }
-		public int Intelligence { get; private set; }
-		public float MaxEncumberance { get; private set; }
+		public int Strength { get; set; }
+		public int Dexterity { get; set; }
+		public int Endurance { get; set; }
+		public int Intelligence { get; set; }
+		public float MaxEncumberance { get; set; }
+        public int CurrentHealth { get; set; }
 
 		#endregion
 
@@ -28,7 +29,7 @@ namespace GameObjects
 
 		#region Read-Only Properties
 
-		public int Health {
+		public int MaxHealth {
 			get {
 				return Strength + Endurance;
 			}

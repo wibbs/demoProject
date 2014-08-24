@@ -1,5 +1,7 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<!--List of consumables that can be found-->
-
-<!-- This is a sample-->
-<Consumable Name="Test Consumable" Sprites="Assets\Consumables\TestConsumable" Weight=10/>
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Consumables>
+  <Consumable Name="Adrenaline" Description="Heals 50 HP and boosts DX for 3 turns" Weight="1" Sprites="Assets\Consumables\TestConsumable" CustomScript="BlurScreen">
+    <Health Turns="3" Value="50" />
+    <Dexterity Turns="3" Value="2" />
+  </Consumable>
+</Consumables>

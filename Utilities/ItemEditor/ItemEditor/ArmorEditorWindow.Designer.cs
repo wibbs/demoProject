@@ -70,6 +70,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.DexterityRequirementSelector)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.StatTypeBonusSelector)).BeginInit();
             this.SuspendLayout();
+            this.FormClosed += ArmorEditorWindow_FormClosed;
             // 
             // ArmorsLabel
             // 
@@ -87,6 +88,7 @@
             this.ArmorsListBox.Name = "ArmorsListBox";
             this.ArmorsListBox.Size = new System.Drawing.Size(120, 394);
             this.ArmorsListBox.TabIndex = 1;
+            this.ArmorsListBox.SelectedIndexChanged += new System.EventHandler(this.ArmorsListBox_SelectedIndexChanged);
             // 
             // NameTextBox
             // 
@@ -310,6 +312,7 @@
             this.StatTypesList.Name = "StatTypesList";
             this.StatTypesList.Size = new System.Drawing.Size(120, 264);
             this.StatTypesList.TabIndex = 31;
+            this.StatTypesList.SelectedIndexChanged += new System.EventHandler(this.StatTypesList_SelectedIndexChanged);
             // 
             // StatTypesLabel
             // 
@@ -354,7 +357,7 @@
             this.DeleteWeaponButton.TabIndex = 38;
             this.DeleteWeaponButton.Text = "Delete";
             this.DeleteWeaponButton.UseVisualStyleBackColor = true;
-            this.DeleteWeaponButton.Click += new System.EventHandler(this.DeleteWeaponButton_Click);
+            this.DeleteWeaponButton.Click += new System.EventHandler(this.DeleteArmorButton_Click);
             // 
             // NewWeaponButton
             // 
@@ -364,7 +367,7 @@
             this.NewWeaponButton.TabIndex = 37;
             this.NewWeaponButton.Text = "New";
             this.NewWeaponButton.UseVisualStyleBackColor = true;
-            this.NewWeaponButton.Click += new System.EventHandler(this.NewWeaponButton_Click);
+            this.NewWeaponButton.Click += new System.EventHandler(this.NewArmorButton_Click);
             // 
             // ArmorEditorWindow
             // 
@@ -406,7 +409,7 @@
             this.Controls.Add(this.ArmorsListBox);
             this.Controls.Add(this.ArmorsLabel);
             this.Name = "ArmorEditorWindow";
-            this.Text = "ArmorEditorWindowcs";
+            this.Text = "Armor Editor";
             ((System.ComponentModel.ISupportInitialize)(this.WeightSelector)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MaxHealthSelector)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CurrentItemHealthSelector)).EndInit();

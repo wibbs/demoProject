@@ -33,6 +33,9 @@ namespace GameObjects
 		public static string XMLCharacter{ get { return "Character"; } }
 		public static string XMLSpritesFolder{ get { return "Sprites"; } }
         public static string XMLDescription { get { return "Description"; } }
+        public static string XMLCustomScript { get { return "CustomScript"; } }
+        public static string XMLValue { get { return "Value"; } }
+        public static string XMLTurnLength { get { return "Turns"; } }
 	}
 }
 

@@ -1,6 +1,6 @@
 ﻿namespace ItemEditor
 {
-    partial class EquipmentStatTypePicker
+    partial class StatTypePicker<T>
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.EquipmentStatTypesLabel = new System.Windows.Forms.Label();
-            this.EquipmentStatTypesList = new System.Windows.Forms.ListBox();
+            this.StatTypesList = new System.Windows.Forms.ListBox();
             this.OKButton = new System.Windows.Forms.Button();
             this.CancelButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -43,14 +43,14 @@
             this.EquipmentStatTypesLabel.TabIndex = 0;
             this.EquipmentStatTypesLabel.Text = "Available Stat Types";
             // 
-            // EquipmentStatTypesList
+            // StatTypesList
             // 
-            this.EquipmentStatTypesList.FormattingEnabled = true;
-            this.EquipmentStatTypesList.Location = new System.Drawing.Point(15, 26);
-            this.EquipmentStatTypesList.Name = "EquipmentStatTypesList";
-            this.EquipmentStatTypesList.Size = new System.Drawing.Size(120, 225);
-            this.EquipmentStatTypesList.TabIndex = 1;
-            this.EquipmentStatTypesList.SelectedIndexChanged += new System.EventHandler(this.EquipmentStatTypesList_SelectedIndexChanged);
+            this.StatTypesList.FormattingEnabled = true;
+            this.StatTypesList.Location = new System.Drawing.Point(15, 26);
+            this.StatTypesList.Name = "StatTypesList";
+            this.StatTypesList.Size = new System.Drawing.Size(120, 225);
+            this.StatTypesList.TabIndex = 1;
+            this.StatTypesList.SelectedIndexChanged += new System.EventHandler(this.EquipmentStatTypesList_SelectedIndexChanged);
             // 
             // OKButton
             // 
@@ -72,16 +72,16 @@
             this.CancelButton.UseVisualStyleBackColor = true;
             this.CancelButton.Click += new System.EventHandler(this.CancelButton_Click);
             // 
-            // EquipmentStatTypePicker
+            // StatTypePicker
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(230, 261);
             this.Controls.Add(this.CancelButton);
             this.Controls.Add(this.OKButton);
-            this.Controls.Add(this.EquipmentStatTypesList);
+            this.Controls.Add(this.StatTypesList);
             this.Controls.Add(this.EquipmentStatTypesLabel);
-            this.Name = "EquipmentStatTypePicker";
+            this.Name = "StatTypePicker";
             this.Text = "Add Stat Type";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -91,7 +91,7 @@
         #endregion
 
         private System.Windows.Forms.Label EquipmentStatTypesLabel;
-        private System.Windows.Forms.ListBox EquipmentStatTypesList;
+        private System.Windows.Forms.ListBox StatTypesList;
         private System.Windows.Forms.Button OKButton;
         private System.Windows.Forms.Button CancelButton;
     }
